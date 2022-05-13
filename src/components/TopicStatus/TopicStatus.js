@@ -1,6 +1,7 @@
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 
-const TopicStatus = () => {
+const TopicStatus = ({ Data }) => {
+
     return (
         <Box
             sx={{
@@ -13,7 +14,13 @@ const TopicStatus = () => {
                 p: "16px",
             }}
         >
-            <div>Topic Status</div>
+            <Typography
+                sx={{ fontSize: "22px", fontWeight: "600", padding: "0 2px" }}
+            >Topic Status</Typography>
+            <div>Topic Name: {Data.topic}</div>
+            <div>Topic State: {Data.payload.status !== null && <span>{Data.payload.status.toString()}</span>}</div>
+
+            <div>Last modified time: {Data.lastModifiedTime}</div>
         </Box>
     )
 }
