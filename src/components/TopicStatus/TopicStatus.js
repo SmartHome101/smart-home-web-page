@@ -2,6 +2,7 @@ import { Box, Typography } from "@mui/material";
 
 const TopicStatus = ({ Data }) => {
 
+    const lastModifiedTimeReadable = new Date(Data.lastModifiedTime)
     return (
         <Box
             sx={{
@@ -20,7 +21,7 @@ const TopicStatus = ({ Data }) => {
             <div>Topic Name: {Data.topic}</div>
             <div>Topic State: {Data.payload.status !== null && <span>{Data.payload.status.toString()}</span>}</div>
 
-            <div>Last modified time: {Data.lastModifiedTime}</div>
+            <div>Last modified time: {lastModifiedTimeReadable.toLocaleString() !== "Invalid Date" && <span>{lastModifiedTimeReadable.toLocaleString()}</span>}</div>
         </Box>
     )
 }

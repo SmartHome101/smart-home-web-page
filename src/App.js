@@ -6,12 +6,10 @@ import PostStatus from "./components/PostStatus/PostStatus";
 import GetStatus from "./components/GetStatus/GetStatus";
 
 const topics = [
-  'lightbulbTopic',
-  'lightbulbReadings',
-  'livingRoomFan',
-  'livingRoomHeater',
   'livingRoomLight',
   'livingRoomWindow',
+  'livingRoomFan',
+  'livingRoomHeater',
   'receptionLight',
   'bathroomLight',
   'bedroomCurtain',
