@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Typography, Box, Button, InputLabel, FormControl, Select, MenuItem, Radio, RadioGroup, FormControlLabel, FormLabel } from "@mui/material";
 import { useTheme } from '@mui/material/styles';
 import axios from "axios";
+// import axios from '../../lib/generalAPI';
 
 
 const PostStatus = ({ Topics, getStyles }) => {
@@ -23,12 +24,12 @@ const PostStatus = ({ Topics, getStyles }) => {
 
     // my aws account api -- IAM user Account
     // const PostData = () => {
-    //     const response = axios.post(`https://u81oc46ubj.execute-api.us-east-2.amazonaws.com/default/accessIoTtopicUsingAPI?topic=${topicName}`,
+    //     const response = axios.post(`${topicName}`,
     //         { status },
     //         {
     //             headers: {
     //                 'Content-type': 'application/json',
-    //                 'X-API-KEY': 'ub0ngFgXo13NasQw9iNca1fCysQUTuDa6zOL6GrN',
+    //                 'X-API-KEY': process.env.REACT_APP_GATEWAY_API_KEY_RAMADAN_IAM_USER,
     //             }
     //         })
     //     return response;
@@ -41,7 +42,7 @@ const PostStatus = ({ Topics, getStyles }) => {
             {
                 headers: {
                     'Content-type': 'application/json',
-                    'X-API-KEY': 'rb21EUMVreCe1p3CITM54SSpxhmZMA721WlfGiV4',
+                    'X-API-KEY': process.env.REACT_APP_GATEWAY_API_KEY_SABEK_USER,
                 }
             })
         return response;
