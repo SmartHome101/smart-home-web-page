@@ -11,23 +11,36 @@ const GetStatus = ({ Topics, getStyles }) => {
         payload: { status: null },
         lastModifiedTime: ""
     });
-    // const [payloadStatus, setPayloadStatus] = useState(false)
     const theme = useTheme();
 
     const handleChange = (event) => {
         setTopicName(event.target.value);
     };
 
+    // my aws account api -- IAM user Account
+    // const GetData = () => {
+    //     const response = axios.get(`https://u81oc46ubj.execute-api.us-east-2.amazonaws.com/default/accessIoTtopicUsingAPI?topic=${topicName}`,
+    //         {
+    //             headers: {
+    //                 'Content-type': 'application/json',
+    //                 'X-API-KEY': 'ub0ngFgXo13NasQw9iNca1fCysQUTuDa6zOL6GrN',
+    //             }
+    //         })
+    //     return response;
+    // }
+
+    // Sabek Account
     const GetData = () => {
-        const response = axios.get(`https://u81oc46ubj.execute-api.us-east-2.amazonaws.com/default/accessIoTtopicUsingAPI?topic=${topicName}`,
+        const response = axios.get(`https://j55nm7cgfj.execute-api.us-east-2.amazonaws.com/default/LambdaForIoT?topic=${topicName}`,
             {
                 headers: {
                     'Content-type': 'application/json',
-                    'X-API-KEY': 'ub0ngFgXo13NasQw9iNca1fCysQUTuDa6zOL6GrN',
+                    'X-API-KEY': 'rb21EUMVreCe1p3CITM54SSpxhmZMA721WlfGiV4',
                 }
             })
         return response;
     }
+
     const handleSubmit = async (e) => {
         e.preventDefault();
         if (topicName.length !== 0) {

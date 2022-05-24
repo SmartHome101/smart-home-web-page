@@ -21,13 +21,27 @@ const PostStatus = ({ Topics, getStyles }) => {
         }
     };
 
+    // my aws account api -- IAM user Account
+    // const PostData = () => {
+    //     const response = axios.post(`https://u81oc46ubj.execute-api.us-east-2.amazonaws.com/default/accessIoTtopicUsingAPI?topic=${topicName}`,
+    //         { status },
+    //         {
+    //             headers: {
+    //                 'Content-type': 'application/json',
+    //                 'X-API-KEY': 'ub0ngFgXo13NasQw9iNca1fCysQUTuDa6zOL6GrN',
+    //             }
+    //         })
+    //     return response;
+    // }
+
+    // Sabek Account
     const PostData = () => {
-        const response = axios.post(`https://u81oc46ubj.execute-api.us-east-2.amazonaws.com/default/accessIoTtopicUsingAPI?topic=${topicName}`,
+        const response = axios.post(`https://j55nm7cgfj.execute-api.us-east-2.amazonaws.com/default/LambdaForIoT?topic=${topicName}`,
             { status },
             {
                 headers: {
                     'Content-type': 'application/json',
-                    'X-API-KEY': 'ub0ngFgXo13NasQw9iNca1fCysQUTuDa6zOL6GrN',
+                    'X-API-KEY': 'rb21EUMVreCe1p3CITM54SSpxhmZMA721WlfGiV4',
                 }
             })
         return response;
