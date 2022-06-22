@@ -7,18 +7,19 @@ import axios from "axios";
 
 const PostStatus = ({ Topics, getStyles }) => {
     const [topicName, setTopicName] = useState('');
-    const [status, setStatus] = useState(true);
+    // const [status, setStatus] = useState(true);
+    const [message, setMessage] = useState(null);
     const theme = useTheme();
 
     const handleChange = (event) => {
         setTopicName(event.target.value);
     };
-    const handleStatusChange = (event) => {
-        if (event.target.value === 'true') {
-            setStatus(true);
+    const handleMessageChange = (event) => {
+        if (event.target.value === 'ON') {
+            setMessage("ON");
         }
         else {
-            setStatus(false);
+            setMessage("OFF");
         }
     };
 
@@ -38,7 +39,7 @@ const PostStatus = ({ Topics, getStyles }) => {
     // Sabek Account
     const PostData = () => {
         const response = axios.post(`https://j55nm7cgfj.execute-api.us-east-2.amazonaws.com/default/LambdaForIoT?topic=${topicName}`,
-            { status },
+            { message },
             {
                 headers: {
                     'Content-type': 'application/json',
@@ -113,11 +114,11 @@ const PostStatus = ({ Topics, getStyles }) => {
                 <RadioGroup
                     aria-labelledby="demo-controlled-radio-buttons-group"
                     name="controlled-radio-buttons-group"
-                    value={status}
-                    onChange={handleStatusChange}
+                    value={message}
+                    onChange={handleMessageChange}
                 >
-                    <FormControlLabel value='true' control={<Radio />} label="True" />
-                    <FormControlLabel value='false' control={<Radio />} label="False" />
+                    <FormControlLabel value='ON' control={<Radio />} label="True" />
+                    <FormControlLabel value='OFF' control={<Radio />} label="False" />
                 </RadioGroup>
             </FormControl>
             <Box sx={{ mt: 2, mb: 3 }}>

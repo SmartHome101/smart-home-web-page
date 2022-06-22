@@ -19,8 +19,7 @@ const TopicStatus = ({ Data }) => {
                 sx={{ fontSize: "22px", fontWeight: "600", padding: "0 2px" }}
             >Topic Status</Typography>
             <div>Topic Name: {Data.topic}</div>
-            <div>Topic State: {Data.payload.status !== null && <span>{Data.payload.status.toString()}</span>}</div>
-
+            <div>Topic State: {Data.payload.message !== null && <span>{Data.payload.message}</span>}</div>
             <div>Last modified time: {lastModifiedTimeReadable.toLocaleString() !== "Invalid Date" && <span>{lastModifiedTimeReadable.toLocaleString()}</span>}</div>
         </Box>
     )
