@@ -1,0 +1,12 @@
+
+.root{
+    margin-top: 50;
+    display: "flex";
+    width: 550;
+    height: 250;
+}
+
+.cardcss{
+    background-image: "../../images/kendallRoychilling.jpg";
+    background-position: "center";
+}

@@ -10,11 +10,10 @@ const GetStatus = ({ Topics, getStyles }) => {
     const [topicName, setTopicName] = useState('');
     const [topicData, setTopicData] = useState({
         topic: '',
-        payload: { status: null },
+        payload: { message: null },
         lastModifiedTime: ""
     });
     const theme = useTheme();
-
     const handleChange = (event) => {
         setTopicName(event.target.value);
     };
@@ -121,7 +120,6 @@ const GetStatus = ({ Topics, getStyles }) => {
             </Box>
             <TopicStatus Data={topicData} />
         </Fragment>
-
     )
 }
 
