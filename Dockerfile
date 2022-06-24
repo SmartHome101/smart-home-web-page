@@ -4,7 +4,7 @@ RUN mkdir /app && chown app:app /app
 USER app
 WORKDIR /app
 RUN mkdir data
-COPY --chown=app:app package*.json .
+COPY --chown=app:app package*.json ./
 RUN npm install 
 COPY . .
 ENV REACT_APP_API_END_POINT_SABEK_USER=https://j55nm7cgfj.execute-api.us-east-2.amazonaws.com/default/LambdaForIoT?topic= \
