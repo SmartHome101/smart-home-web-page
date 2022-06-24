@@ -8,6 +8,8 @@ import Bar from "./components/Bar/Bar";
 import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
 import WelcomePage from "./pages/WelcomePage/WelcomePage";
+import WeatherApp from "./pages/WeatherApp/WeatherApp";
+import Rooms from "./pages/Rooms/Rooms";
 
 // import PostStatus from "./components/PostStatus/PostStatus";
 // import GetStatus from "./components/GetStatus/GetStatus";
@@ -42,9 +44,11 @@ const App = () => {
       <CssBaseline />
       <Bar />
       <Routes>
+        <Route path="/" element={<WelcomePage />} />
         <Route path="/home" element={<Home />} />
-        <Route path="/welcome-page" element={<WelcomePage />} />
         <Route path="/about" element={<About />} />
+        <Route path="/rooms" element={<Rooms />} />
+        <Route path="/weather-app" element={<WeatherApp />} />
         <Route path="*" element={<Navigate to="/not-found" />} />
         <Route path="/not-found" element={<NotFound />} />
       </Routes>

@@ -5,6 +5,7 @@ import classes from "./WelcomePage.module.css";
 import HomeIcon from '@mui/icons-material/Home';
 import InfoIcon from '@mui/icons-material/Info';
 import AcUnitIcon from '@mui/icons-material/AcUnit';
+import { Typography } from "@mui/material";
 
 const WelcomePage = () => {
 
@@ -12,11 +13,11 @@ const WelcomePage = () => {
 
     const handleOnClickHome = (e) => {
         e.preventDefault();
-        navigate("/home");
+        navigate("/rooms");
     }
     const handleOnClickWeather = (e) => {
         e.preventDefault();
-        navigate("/about");
+        navigate("/weather-app");
     }
     const handleOnClickAbout = (e) => {
         e.preventDefault();
@@ -25,7 +26,7 @@ const WelcomePage = () => {
     return (
         <Fragment>
             <div className={classes.sec}>
-                <h2>Welcome to Smart Home 101</h2>
+                <Typography variant="h5" component='h2'>Welcome to Smart Home 101</Typography>
                 <ul>
                     <li onClick={handleOnClickHome}>
                         <span><HomeIcon /></span>
