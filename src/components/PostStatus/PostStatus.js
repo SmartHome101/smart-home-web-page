@@ -14,6 +14,8 @@ const PostStatus = ({ Topics, getStyles }) => {
     const handleChange = (event) => {
         setTopicName(event.target.value);
     };
+
+
     const handleMessageChange = (event) => {
         if (event.target.value === 'ON') {
             setMessage("ON");
@@ -59,7 +61,6 @@ const PostStatus = ({ Topics, getStyles }) => {
                 console.log(error);
             }
         }
-
     }
 
     return (

@@ -6,7 +6,13 @@ import GetStatus from "../../components/GetStatus/GetStatus";
 const topics = [
     'home/node1/D1',
     'home/node1/D2',
+    'home/node1/D3',
+    'home/node1/D4',
+    'home/node1/D5',
     'home/node1/D6',
+    'home/node1/D7',
+    'home/node1/D8',
+    'home/node1/D9',
     'livingRoomLight',
     'livingRoomWindow',
     'livingRoomFan',

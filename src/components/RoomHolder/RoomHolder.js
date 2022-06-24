@@ -2,7 +2,6 @@ import { Box, Container, Typography } from "@mui/material"
 import SensorCardHolder from "../SensorCardHolder/SensorCardHolder"
 
 
-
 const RoomHolder = ({ RoomName, Sensors }) => {
     return (
         <Container>
@@ -19,9 +18,9 @@ const RoomHolder = ({ RoomName, Sensors }) => {
                     mt: 5,
                 }}
             >
-                <Typography variant="h5" sx={{mb: 2, fontWeight: 'bold', textShadow: '2px 2px 8px #ade8f4'}}>{RoomName}</Typography>
+                <Typography variant="h5" sx={{ mb: 2, mr: 2, fontWeight: 'bold' }}>{RoomName}</Typography>
                 <Box sx={{
-                    display: 'flex', flexDirection: {xs: 'column', sm: 'row', md: 'row'}, flexWrap: 'wrap'
+                    display: 'flex', flexDirection: { xs: 'column', sm: 'row', md: 'row' }, flexWrap: 'wrap'
                 }}>
                     {Sensors.map((sensor) => (<SensorCardHolder key={sensor.sensorId} sensor={sensor} />))}
                 </Box>
