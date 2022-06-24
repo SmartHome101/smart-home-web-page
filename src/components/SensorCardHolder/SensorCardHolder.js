@@ -6,6 +6,7 @@ import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 
 const SensorCardHolder = ({ sensor }) => {
+
     return (
         <Box sx={{mr: {xs: 1, sm: 2, md: 2}, mb: 2}}>
             <Card sx={{ width: "auto", boxShadow: 3, borderRadius: 2,}}>
@@ -18,8 +19,8 @@ const SensorCardHolder = ({ sensor }) => {
                     </Typography>
                 </CardContent>
                 <CardActions>
-                    <Button size="small">Get</Button>
-                    <Button size="small">Post</Button>
+                    <Button variant="contained" size="small">Get</Button>
+                    <Button variant="contained" size="small">Post</Button>
                 </CardActions>
             </Card>
         </Box>
