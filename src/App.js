@@ -9,6 +9,7 @@ import About from "./pages/About/About";
 import WelcomePage from "./pages/WelcomePage/WelcomePage";
 import WeatherApp from "./pages/WeatherApp/WeatherApp";
 import Rooms from "./pages/Rooms/Rooms";
+import Footer from "./components/Footer/Footer";
 
 const App = () => {
   return (
@@ -24,6 +25,7 @@ const App = () => {
         <Route path="*" element={<Navigate to="/not-found" />} />
         <Route path="/not-found" element={<NotFound />} />
       </Routes>
+      <Footer/>
     </Fragment>
   );
 }
