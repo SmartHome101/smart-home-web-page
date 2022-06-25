@@ -1,15 +1,27 @@
+
+.boxContainer{
+  background-image: url('../../images/cover2.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 650px;
+  margin: 30px;
+  border-radius: 20px;
+  box-shadow:15px 15px #45589e;
+  font-size: 100%;
+}
 .sec {
   font-family: "Raleway", sans-serif;
   padding: 50px 0;
-  background: #fff;
   text-align: center;
   word-wrap: break-word;
+  
 }
 .sec h2 {
   font-weight: 200;
   margin-bottom: 30px;
-  font-size: 30px;
-  color: #63b7e6;
+  font-size: 40px;
+  font-weight: bold;
+  color: #fff;
 }
 .sec ul {
   margin: 0;
@@ -31,13 +43,18 @@
     0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 .sec ul li:hover span {
-  color: #63b7e6;
+  color: hsl(64, 100%, 60%);
+  font-size: larger;
+  
 }
 .sec ul li:hover p {
-  color: #555;
+  color: #fff;
+  font-size: 100%;
 }
 .sec ul li:hover h3 {
-  color: #63b7e6;
+  color: #fff;
+  font-size: 160%;
+  font-weight: bold;
 }
 .sec ul li:hover h3:after {
   width: 25px;
@@ -46,14 +63,14 @@
   font-size: 2.6em;
   display: block;
   transition: color 0.3s;
-  color: #a2a2a2;
+  color: #f2db09;
 }
 .sec ul li span:before,
 .sec ul li span:after {
   position: static;
 }
 .sec ul li h3 {
-  color: #6f6f6f;
+  color: #fff;
   display: inline-block;
   font-size: 24px;
   font-weight: 100;
@@ -69,15 +86,14 @@
   display: block;
   width: 40px;
   height: 1px;
-  background: #6f6f6f;
-  transition: width 0.3s;
+  transition: width 0.5s;
 }
 .sec ul li p {
-  color: #a2a2a2;
+  color: #fff;
   text-align: left;
   text-indent: 1em;
   font-size: 16px;
   line-height: 26px;
   margin: 16px 0;
-  transition: color 0.3s;
+  transition: color 0.5s;
 }

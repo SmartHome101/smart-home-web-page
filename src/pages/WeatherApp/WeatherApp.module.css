@@ -1,12 +1,89 @@
 
-.root{
-    margin-top: 50;
-    display: "flex";
-    width: 550;
-    height: 250;
+.container {
+  background-image: url('../../images/cover2.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 600px;
+  margin: 50px;
+  border-radius: 20px;
+  box-shadow:15px 15px #45589e;
+  font-size: 100%;
+}
+.header {
+  color: aliceblue;
+  font-size: 130%;
 }
 
-.cardcss{
-    background-image: "../../images/kendallRoychilling.jpg";
-    background-position: "center";
+.card {
+  background: #262626d0;
+  color: white;
+  padding: 2em;
+  align-items: center;
+  border-radius: 30px;
+  width: 100%;
+  max-width: 420px;
+  margin: auto;
+  margin-top: 35px;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button {
+  height: 44px;
+  width: 44px;
+  margin: 0.5em;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  background: #7c7c7c2b;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+.searchBar {
+  border: none;
+  outline: none;
+  padding: 0.4em 1em;
+  border-radius: 24px;
+  background: #7c7c7c2b;
+  color: white;
+  font-family: inherit;
+  font-size: 105%;
+  width: calc(100% - 100px);
+}
+
+.search button:hover {
+  background: #45589e;
+}
+.temp {
+  margin: 0;
+  color: #fff;
+  margin-bottom: 0.4em;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+.description {
+  text-transform: capitalize;
+  margin-left: 8px;
+}
+.weather.loading {
+  visibility: hidden;
+  max-height: 20px;
+  position: relative;
+}
+
+.weather.loading:after {
+  visibility: visible;
+  content: "Loading...";
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 20px;
 }

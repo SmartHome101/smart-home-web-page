@@ -14,7 +14,7 @@ const App = () => {
   return (
     <Fragment>
       <CssBaseline />
-      <Bar />
+      {/* <Bar /> */}
       <Routes>
         <Route path="/" element={<WelcomePage />} />
         <Route path="/home" element={<Home />} />
