@@ -47,7 +47,6 @@ const WelcomePage = () => {
                     </ul>
                 </div>
             </Box>
-
         </Fragment>
     )
 }

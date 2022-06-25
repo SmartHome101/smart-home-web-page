@@ -80,16 +80,22 @@ const SensorCardHolder = ({ sensor }) => {
 
     return (
         <Box sx={{ mr: { xs: 1, sm: 2, md: 2 }, mb: 2 }}>
-            <Card sx={{ width: "auto", boxShadow: 3, borderRadius: 2, }}>
+            <Card sx={{
+                width: "auto",
+                borderRadius: '20px',
+                bgcolor: '#069cbf',
+                boxShadow: '5px 5px #b8e0d2',
+                color: '#fff'
+            }}>
                 <CardContent>
                     <Typography gutterBottom variant="h5" component="div">
                         {sensor.sensorName}
                     </Typography>
-                    <Box sx={{display: 'flex', justifyContent: 'space-between'}}>
-                    <Typography variant="body2" color="text.secondary">
-                        {ConvertTFtoONOFF(checked)}
-                    </Typography>
-                    <Typography variant="body2" >{lastModifiedTimeReadable.toLocaleTimeString([], {hour: '2-digit', minute: '2-digit'})}</Typography>
+                    <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
+                        <Typography variant="body2">
+                            {ConvertTFtoONOFF(checked)}
+                        </Typography>
+                        <Typography variant="body2" >{lastModifiedTimeReadable.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</Typography>
                     </Box>
                     <FormGroup>
                         <Stack direction="row" spacing={1} alignItems="center">
