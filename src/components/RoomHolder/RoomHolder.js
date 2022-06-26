@@ -1,6 +1,5 @@
 import { Box, Container, Typography } from "@mui/material"
 import SensorCardHolder from "../SensorCardHolder/SensorCardHolder"
-import cover from '../../images/cover2.png'
 
 const RoomHolder = ({ RoomName, Sensors }) => {
     return (

@@ -1,6 +1,6 @@
 import classes from './WeatherApp.module.css'
 import SearchIcon from '@mui/icons-material/Search';
-import { Container } from '@mui/material';
+import { Box, Container } from '@mui/material';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 
@@ -43,7 +43,7 @@ const WeatherApp = () => {
     }
 
     return (
-        <Container className={classes.container}>
+        <Box className={classes.container}>
             <div className={classes.header}>
                 <h1 className={classes.header}>The World's Weather at your fingertips</h1>
             </div>
@@ -71,7 +71,7 @@ const WeatherApp = () => {
                     {data.wind ? <div className={classes.wind}>Wind speed: {data.wind.speed} km/h</div> : <div className={classes.wind}>Wind speed: 6.2 km/h</div>}
                 </div>
             </div>
-        </Container>
+        </Box>
     )
 }
 

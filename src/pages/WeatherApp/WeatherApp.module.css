@@ -1,14 +1,15 @@
 
 .container {
-  background-image: url('../../images/cover2.png');
+  background-image: url('../../assests/cover2.png');
   background-repeat: no-repeat;
   background-size: cover;
-  margin: 50px;
   border-radius: 20px;
   box-shadow:15px 15px #45589e;
   font-size: 100%;
   padding-bottom: 80px;
+  margin: 30px;
 }
+
 .header {
   color: aliceblue;
   font-size: 130%;
@@ -86,4 +87,21 @@
   position: absolute;
   top: 0;
   left: 20px;
+}
+
+
+@media (max-width: 600px) {
+    .container{
+      margin: 30px 20px;
+    }
+
+    .header {
+      font-size: 120%;
+    }
+
+    .card {
+      padding: 1em;
+      width: 100%;
+      max-width: 300px;
+    }
 }

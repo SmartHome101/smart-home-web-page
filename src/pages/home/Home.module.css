@@ -3,11 +3,10 @@
   background-image: url('../../assests/cover2.png');
   background-repeat: no-repeat;
   background-size: cover;
-
-  margin: 30px;
   border-radius: 20px;
   box-shadow:10px 10px #546bbf;
   font-size: 100%;
+  margin: 30px;
 }
 .sec {
   font-family: "Raleway", sans-serif;
