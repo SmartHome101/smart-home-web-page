@@ -5,8 +5,8 @@ import NotFound from "./pages/NotFound/NotFound";
 // import custom components
 import Bar from "./components/Bar/Bar";
 import TestAPI from "./pages/TestAPI/TestAPI";
-import About from "./pages/About/About";
-import Home from "./pages/Home/Home";
+import About from "./pages/about/about";
+import Home from "./pages/home/home";
 import WeatherApp from "./pages/WeatherApp/WeatherApp";
 import Rooms from "./pages/Rooms/Rooms";
 import Footer from "./components/Footer/Footer";
