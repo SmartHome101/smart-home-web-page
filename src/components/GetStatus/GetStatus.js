@@ -16,7 +16,6 @@ const GetStatus = ({ Topics, getStyles }) => {
     const theme = useTheme();
     const handleChange = (event) => {
         setTopicName(event.target.value);
-        console.log(event.target.value)
     };
 
     // my aws account api -- IAM user Account

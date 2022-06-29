@@ -16,27 +16,27 @@ const CardSensorHolder = ({ sensor }) => {
     const [data, setData] = useState([]);
 
 
-    // useEffect(() => {
-    //     async function fetchData() {
-    //         const request = await axios.get(`https://j55nm7cgfj.execute-api.us-east-2.amazonaws.com/default/LambdaForIoT?topic=${sensor.SensorTopic}`,
-    //             {
-    //                 headers: {
-    //                     'Content-type': 'application/json',
-    //                     'X-API-KEY': process.env.REACT_APP_GATEWAY_API_KEY_SABEK_USER,
-    //                 }
-    //             });
-    //         const { data } = request
-    //         setData(data);
-    //         if (request.data.payload.message === 'ON') {
-    //             setChecked(true)
-    //         }
-    //         else {
-    //             setChecked(false)
-    //         }
-    //         return request;
-    //     }
-    //     fetchData();
-    // }, [sensor.SensorTopic])
+    useEffect(() => {
+        async function fetchData() {
+            const request = await axios.get(`https://j55nm7cgfj.execute-api.us-east-2.amazonaws.com/default/LambdaForIoT?topic=${sensor.SensorTopic}`,
+                {
+                    headers: {
+                        'Content-type': 'application/json',
+                        'X-API-KEY': process.env.REACT_APP_GATEWAY_API_KEY_SABEK_USER,
+                    }
+                });
+            const { data } = request
+            setData(data);
+            if (request.data.payload.message === 'ON') {
+                setChecked(true)
+            }
+            else {
+                setChecked(false)
+            }
+            return request;
+        }
+        fetchData();
+    }, [sensor.SensorTopic])
 
 
     const ConvertTFtoONOFF = (checked) => {

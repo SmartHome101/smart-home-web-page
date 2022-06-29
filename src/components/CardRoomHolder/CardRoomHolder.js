@@ -1,14 +1,16 @@
 import { Box, Typography } from "@mui/material";
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import RoomSensorsHolder from "../RoomSensorsHolder/RoomSensorsHolder";
 
-const CardRoomHolder = ({ RoomName, Sensors}) => {
+const CardRoomHolder = ({ RoomName, Sensors }) => {
     const navigate = useNavigate();
-
+    
     const handleOnClick = (e) => {
         e.preventDefault();
-        navigate('/')
+        navigate('rooms/' + RoomName.split(" ").join("").toLowerCase())
     }
     return (
         <Box sx={{ mb: 2 }} component='form' onClick={handleOnClick}>
@@ -22,7 +24,7 @@ const CardRoomHolder = ({ RoomName, Sensors}) => {
                         {RoomName}
                     </Typography>
                     <Typography variant="body1">
-                        3x devices
+                        {Sensors.length}x devices
                     </Typography>
                 </CardContent>
             </Card>
