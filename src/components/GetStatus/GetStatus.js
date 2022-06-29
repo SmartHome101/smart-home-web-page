@@ -1,5 +1,5 @@
 import { Fragment, useState } from "react";
-import { Typography, Box, Button, InputLabel, FormControl, Select, MenuItem } from "@mui/material";
+import { Typography, Box, Button, InputLabel, FormControl, Select, MenuItem, TextField } from "@mui/material";
 import { useTheme } from '@mui/material/styles';
 import TopicStatus from "../TopicStatus/TopicStatus";
 // import axios from '../../lib/generalAPI';
@@ -16,6 +16,7 @@ const GetStatus = ({ Topics, getStyles }) => {
     const theme = useTheme();
     const handleChange = (event) => {
         setTopicName(event.target.value);
+        console.log(event.target.value)
     };
 
     // my aws account api -- IAM user Account
@@ -44,10 +45,12 @@ const GetStatus = ({ Topics, getStyles }) => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        
         if (topicName.length !== 0) {
             try {
                 const { data } = await GetData()
                 setTopicData(data)
+                setTopicName('')
             }
             catch (error) {
                 console.log(error);
@@ -84,8 +87,15 @@ const GetStatus = ({ Topics, getStyles }) => {
                     </Typography>
                 </Box>
                 <FormControl sx={{ m: 1, minWidth: 120 }}>
-                    <InputLabel>Topic Name</InputLabel>
-                    <Select
+                    <TextField
+                        id="outlined-helperText"
+                        label="Topic Name"
+                        value={topicName}
+                        onChange={handleChange}
+                        helperText="Please, choose the topic name carefully"
+                    />
+                    {/* <InputLabel>Topic Name</InputLabel> */}
+                    {/* <Select
                         value={topicName}
                         label="Topic Name"
                         onChange={handleChange}
@@ -102,7 +112,7 @@ const GetStatus = ({ Topics, getStyles }) => {
                                 {topic}
                             </MenuItem>
                         ))}
-                    </Select>
+                    </Select> */}
                 </FormControl>
                 <Box sx={{ mt: 2, mb: 3 }}>
                     <Button

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Typography, Box, Button, InputLabel, FormControl, Select, MenuItem, Radio, RadioGroup, FormControlLabel, FormLabel } from "@mui/material";
+import { Typography, Box, Button, InputLabel, FormControl, Select, MenuItem, Radio, RadioGroup, FormControlLabel, FormLabel, TextField } from "@mui/material";
 import { useTheme } from '@mui/material/styles';
 import axios from "axios";
 // import axios from '../../lib/generalAPI';
@@ -56,6 +56,8 @@ const PostStatus = ({ Topics, getStyles }) => {
         if (topicName.length !== 0) {
             try {
                 await PostData()
+                setTopicName('')
+                setMessage(null)
             }
             catch (error) {
                 console.log(error);
@@ -92,7 +94,14 @@ const PostStatus = ({ Topics, getStyles }) => {
                 </Typography>
             </Box>
             <FormControl sx={{ m: 1, minWidth: 120 }}>
-                <InputLabel>Topic Name</InputLabel>
+                <TextField
+                    id="outlined-helperText"
+                    label="Topic Name"
+                    value={topicName}
+                    onChange={handleChange}
+                    helperText="Please, choose the topic name carefully"
+                />
+                {/* <InputLabel>Topic Name</InputLabel>
                 <Select
                     value={topicName}
                     label="Topic Name"
@@ -110,16 +119,16 @@ const PostStatus = ({ Topics, getStyles }) => {
                             {topic}
                         </MenuItem>
                     ))}
-                </Select>
-                <FormLabel id="demo-controlled-radio-buttons-group">Status</FormLabel>
+                </Select> */}
+                <FormLabel id="demo-controlled-radio-buttons-group" sx={{ mt: 2 }}>Status</FormLabel>
                 <RadioGroup
                     aria-labelledby="demo-controlled-radio-buttons-group"
                     name="controlled-radio-buttons-group"
                     value={message}
                     onChange={handleMessageChange}
                 >
-                    <FormControlLabel value='ON' control={<Radio />} label="True" />
-                    <FormControlLabel value='OFF' control={<Radio />} label="False" />
+                    <FormControlLabel value='ON' control={<Radio />} label="ON" />
+                    <FormControlLabel value='OFF' control={<Radio />} label="OFF" />
                 </RadioGroup>
             </FormControl>
             <Box sx={{ mt: 2, mb: 3 }}>

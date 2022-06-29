@@ -4,9 +4,7 @@ import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import classes from './Member.module.css'
-// import Ramadan from '../../assests/SmartHomeTeam/Ramadan.jpg'
 import { Box } from '@mui/material';
-import { Link } from 'react-router-dom';
 
 
 const Member = ({ Name, About, Avatar, ContactInfo }) => {
@@ -14,7 +12,8 @@ const Member = ({ Name, About, Avatar, ContactInfo }) => {
         <Box>
             <Card
                 sx={{
-                    width: '300px',
+                    width: {xs: '250px', lg: '300px'},
+                    minHeight: '450px',
                     boxShadow: 4,
                     borderRadius: '20px',
                     display: 'flex',
@@ -22,7 +21,7 @@ const Member = ({ Name, About, Avatar, ContactInfo }) => {
                     justifyContent: 'center',
                     mt: 4
                 }}>
-                <img src={Avatar} alt='avatar' className={classes.media} />
+                <img alt='avatar' src={Avatar} className={classes.media}/>
                 <CardContent>
                     <Typography gutterBottom variant="h5" component="div">
                         {Name}
@@ -32,8 +31,7 @@ const Member = ({ Name, About, Avatar, ContactInfo }) => {
                     </Typography>
                 </CardContent>
                 <CardActions>
-                    <Button size="small" sx={{borderRadius: '50px'}} href={ContactInfo}>connect
-                        </Button>
+                    <Button size="small" sx={{borderRadius: '50px'}} href={ContactInfo}>connect</Button>
                 </CardActions>
             </Card>
         </Box>

@@ -13,15 +13,6 @@ const topics = [
     'home/node1/D7',
     'home/node1/D8',
     'home/node1/D9',
-    'livingRoomLight',
-    'livingRoomWindow',
-    'livingRoomFan',
-    'livingRoomHeater',
-    'receptionLight',
-    'bathroomLight',
-    'bedroomCurtain',
-    'bedroomFan',
-    'kitchenLight'
 ];
 
 const getStyles = (name, topicName, theme) => {
