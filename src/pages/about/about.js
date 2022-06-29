@@ -2,7 +2,7 @@ import { Fragment } from "react"
 import Member from '../../components/Member/Member'
 import { Box, Typography } from '@mui/material';
 import GP_Team from '../../assests/smartHomeArt.png';
-import classes from './About.module.css';
+import classes from './about.module.css';
 import ramadan from '../../assests/smartHomeTeam/ramadan.jpg';
 import nabil from '../../assests/smartHomeTeam/nabil.jpg';
 import sabek from '../../assests/smartHomeTeam/sabek.jpg';
