@@ -11,32 +11,32 @@ import axios from "axios";
 import IOSSwitch from './IOSSwitch'
 
 
-const SensorCardHolder = ({ sensor }) => {
+const CardSensorHolder = ({ sensor }) => {
     const [checked, setChecked] = useState(false);
     const [data, setData] = useState([]);
 
 
-    useEffect(() => {
-        async function fetchData() {
-            const request = await axios.get(`https://j55nm7cgfj.execute-api.us-east-2.amazonaws.com/default/LambdaForIoT?topic=${sensor.SensorTopic}`,
-                {
-                    headers: {
-                        'Content-type': 'application/json',
-                        'X-API-KEY': process.env.REACT_APP_GATEWAY_API_KEY_SABEK_USER,
-                    }
-                });
-            const { data } = request
-            setData(data);
-            if (request.data.payload.message === 'ON') {
-                setChecked(true)
-            }
-            else {
-                setChecked(false)
-            }
-            return request;
-        }
-        fetchData();
-    }, [sensor.SensorTopic])
+    // useEffect(() => {
+    //     async function fetchData() {
+    //         const request = await axios.get(`https://j55nm7cgfj.execute-api.us-east-2.amazonaws.com/default/LambdaForIoT?topic=${sensor.SensorTopic}`,
+    //             {
+    //                 headers: {
+    //                     'Content-type': 'application/json',
+    //                     'X-API-KEY': process.env.REACT_APP_GATEWAY_API_KEY_SABEK_USER,
+    //                 }
+    //             });
+    //         const { data } = request
+    //         setData(data);
+    //         if (request.data.payload.message === 'ON') {
+    //             setChecked(true)
+    //         }
+    //         else {
+    //             setChecked(false)
+    //         }
+    //         return request;
+    //     }
+    //     fetchData();
+    // }, [sensor.SensorTopic])
 
 
     const ConvertTFtoONOFF = (checked) => {
@@ -81,25 +81,25 @@ const SensorCardHolder = ({ sensor }) => {
     return (
         <Box sx={{ mr: { xs: 1, sm: 2, md: 2 }, mb: 2 }}>
             <Card sx={{
-                width: "auto",
+                minWidth: '190px',
                 borderRadius: '20px',
                 bgcolor: '#069cbf',
                 boxShadow: '5px 5px #b8e0d2',
                 color: '#fff'
             }}>
                 <CardContent>
-                    <Typography gutterBottom variant="h5" component="div">
+                    <Typography gutterBottom variant="body1" component="div" sx={{fontWeight: '600'}}>
                         {sensor.sensorName}
                     </Typography>
                     <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
                         <Typography variant="body2">
                             {ConvertTFtoONOFF(checked)}
                         </Typography>
-                        <Typography variant="body2" >{lastModifiedTimeReadable.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</Typography>
+                        <Typography variant="subtitle2" >{lastModifiedTimeReadable.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</Typography>
                     </Box>
                     <FormGroup>
                         <Stack direction="row" spacing={1} alignItems="center">
-                            <Typography>Off</Typography>
+                            <Typography variant="subtitle2">Off</Typography>
                             <FormControlLabel
                                 control={
                                     <IOSSwitch
@@ -108,7 +108,7 @@ const SensorCardHolder = ({ sensor }) => {
                                         sx={{ m: 1 }}
                                     />}
                             />
-                            <Typography>On</Typography>
+                            <Typography variant="subtitle2">On</Typography>
                         </Stack>
                     </FormGroup >
                 </CardContent>
@@ -117,4 +117,4 @@ const SensorCardHolder = ({ sensor }) => {
     )
 }
 
-export default SensorCardHolder
+export default CardSensorHolder

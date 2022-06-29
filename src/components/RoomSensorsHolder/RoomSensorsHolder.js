@@ -1,7 +1,7 @@
 import { Box, Container, Typography } from "@mui/material"
-import SensorCardHolder from "../SensorCardHolder/SensorCardHolder"
+import CardSensorHolder from "../CardSensorHolder/CardSensorHolder"
 
-const RoomHolder = ({ RoomName, Sensors }) => {
+const RoomSensorsHolder = ({ RoomName, Sensors }) => {
     return (
         <Container>
             <Box
@@ -23,11 +23,11 @@ const RoomHolder = ({ RoomName, Sensors }) => {
                 <Box sx={{
                     display: 'flex', flexDirection: { xs: 'column', sm: 'row', md: 'row' }, flexWrap: 'wrap'
                 }}>
-                    {Sensors.map((sensor) => (<SensorCardHolder key={sensor.sensorId} sensor={sensor} />))}
+                    {Sensors.map((sensor) => (<CardSensorHolder key={sensor.sensorId} sensor={sensor} />))}
                 </Box>
             </Box>
         </Container>
     )
 }
 
-export default RoomHolder
+export default RoomSensorsHolder
