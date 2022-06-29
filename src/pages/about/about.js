@@ -10,6 +10,7 @@ import sabek from '../../assests/smartHomeTeam/sabek.jpg';
 import mohamedNour from '../../assests/smartHomeTeam/mohamedNour.jpg';
 import eman from '../../assests/smartHomeTeam/eman.jpeg';
 import bebars from '../../assests/smartHomeTeam/bebars.jpg';
+import alfy from '../../assests/smartHomeTeam/alfy.JPG';
 import blank_avatar from '../../assests/smartHomeTeam/blank_avatar.png';
 
 
@@ -73,9 +74,9 @@ const smartHomeTeamData = [
     {
         id: 9,
         name: 'Mahmoud ElAlfy',
-        about: 'Software Engineer | Mobile App team',
-        contactInfo: '',
-        avatar: blank_avatar,
+        about: 'Junior Front-End Developer | Mobile App team',
+        contactInfo: 'https://www.linkedin.com/in/mahmoud-elalfy-79b894209',
+        avatar: alfy,
     },
     {
         id: 10,
