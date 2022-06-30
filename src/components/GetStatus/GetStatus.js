@@ -1,9 +1,11 @@
 import { Fragment, useState } from "react";
-import { Typography, Box, Button, InputLabel, FormControl, Select, MenuItem, TextField } from "@mui/material";
-import { useTheme } from '@mui/material/styles';
-import TopicStatus from "../TopicStatus/TopicStatus";
-// import axios from '../../lib/generalAPI';
+import { Typography, Box, Button, FormControl, TextField } from "@mui/material";
 import axios from "axios";
+import TopicStatus from "../TopicStatus/TopicStatus";
+
+// import {InputLabel,  Select, MenuItem} from "@mui/material";
+// import { useTheme } from '@mui/material/styles';
+// import axios from '../../lib/generalAPI';
 
 
 const GetStatus = ({ Topics, getStyles }) => {
@@ -13,7 +15,7 @@ const GetStatus = ({ Topics, getStyles }) => {
         payload: { message: null },
         lastModifiedTime: ""
     });
-    const theme = useTheme();
+    // const theme = useTheme();
     const handleChange = (event) => {
         setTopicName(event.target.value);
     };
