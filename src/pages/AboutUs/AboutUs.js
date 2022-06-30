@@ -1,12 +1,12 @@
 import { Fragment } from "react"
 import { Box, Typography } from '@mui/material';
 import GP_Team from '../../assests/smartHomeArt.png';
-import classes from './About.module.css';
+import classes from './AboutUs.module.css';
 //import custom components
 import Member from '../../components/Member/Member'
 
 
-const About = ({ smartHomeTeamData }) => {
+const AboutUs = ({ techHomeTeamData }) => {
     return (
         <Fragment>
             <Box sx={{
@@ -49,7 +49,7 @@ const About = ({ smartHomeTeamData }) => {
                     }}>Meet the team</Typography>
                 <Box
                     sx={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-evenly', mb: 7, mt: 2 }}>
-                    {smartHomeTeamData.map((teamMember) => (
+                    {techHomeTeamData.map((teamMember) => (
                         <Member
                             key={teamMember.id}
                             Name={teamMember.name}
@@ -63,4 +63,4 @@ const About = ({ smartHomeTeamData }) => {
     )
 }
 
-export default About
+export default AboutUs
