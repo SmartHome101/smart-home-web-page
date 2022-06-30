@@ -31,7 +31,7 @@ const Member = ({ Name, About, Avatar, ContactInfo }) => {
                     </Typography>
                 </CardContent>
                 <CardActions>
-                    <Button size="small" sx={{borderRadius: '50px'}} href={ContactInfo}>connect</Button>
+                    <Button size="small" sx={{borderRadius: '50px'}} href={ContactInfo} target="_blank">connect</Button>
                 </CardActions>
             </Card>
         </Box>

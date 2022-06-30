@@ -83,9 +83,9 @@ const CardSensorHolder = ({ sensor }) => {
             <Card sx={{
                 minWidth: '190px',
                 borderRadius: '20px',
-                bgcolor: '#069cbf',
-                boxShadow: '5px 5px #b8e0d2',
-                color: '#fff'
+                bgcolor: '#fff',
+                boxShadow: 3,
+                color: '#000'
             }}>
                 <CardContent>
                     <Typography gutterBottom variant="body1" component="div" sx={{fontWeight: '600'}}>

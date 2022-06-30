@@ -10,7 +10,6 @@ const Rooms = ({ HomesDb }) => {
                     display: "flex",
                     flexDirection: "column",
                     justifyContent: "space-around",
-                    color: '#fff',
                     mb: 5,
                     mt: 5,
                 }}
@@ -22,7 +21,7 @@ const Rooms = ({ HomesDb }) => {
                     boxShadow: 3,
                     borderRadius: '20px 20px 0px 0px ',
                 }}>
-                    <Typography variant='h5' sx={{ fontWeight: '600' }}>Rooms</Typography>
+                    <Typography variant='h5' sx={{ fontWeight: '600', color: '#fff' }}>Rooms</Typography>
                 </Box>
                 {HomesDb.map((home) => (
                     <div key={home.homeId}>
@@ -30,6 +29,7 @@ const Rooms = ({ HomesDb }) => {
                             <CardRoomHolder
                                 key={room.roomId}
                                 RoomName={room.roomName}
+                                RoomIcon={room.roomIcon}
                                 Sensors={room.sensors}
                             />
                         ))}

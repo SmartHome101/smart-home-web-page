@@ -1,26 +1,21 @@
-import { Box, Container, Typography } from "@mui/material"
+import { Box, Container } from "@mui/material"
 // import custom components
 import CardSensorHolder from "../CardSensorHolder/CardSensorHolder"
 
-const RoomSensorsHolder = ({ RoomName, Sensors }) => {
+const RoomSensorsHolder = ({ Sensors }) => {
     return (
         <Container>
             <Box
                 sx={{
-                    bgcolor: 'primary.main',
                     display: "flex",
                     flexDirection: "column",
                     justifyContent: "space-around",
                     color: '#fff',
                     width: "auto",
-                    boxShadow: '6px 7px #546bbf',
                     borderRadius: '20px',
-                    p: "16px",
                     mb: 5,
-                    mt: 5,
                 }}
             >
-                <Typography variant="h5" sx={{ mb: 2, mr: 2, fontWeight: 'bold' }}>{RoomName}</Typography>
                 <Box sx={{
                     display: 'flex', flexDirection: { xs: 'column', sm: 'row', md: 'row' }, flexWrap: 'wrap'
                 }}>

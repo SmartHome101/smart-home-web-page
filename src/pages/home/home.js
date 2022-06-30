@@ -27,7 +27,7 @@ const Home = () => {
         <Fragment>
             <Box className={classes.boxContainer}>
                 <div className={classes.sec}>
-                    <Typography variant="h5" component='h2'>Welcome to Smart Home 101</Typography>
+                    <Typography variant='h2'>Welcome to Techome</Typography>
                     <ul>
                         <li onClick={handleOnClickHome}>
                             <span><HomeIcon /></span>

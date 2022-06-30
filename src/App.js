@@ -1,7 +1,10 @@
 import { Fragment } from "react";
-import CssBaseline from "@mui/material/CssBaseline";
 import { Routes, Route, Navigate } from "react-router-dom";
-import NotFound from "./pages/NotFound/NotFound";
+import CssBaseline from "@mui/material/CssBaseline";
+import ChairOutlinedIcon from '@mui/icons-material/ChairOutlined';
+import KingBedOutlinedIcon from '@mui/icons-material/KingBedOutlined';
+import KitchenOutlinedIcon from '@mui/icons-material/KitchenOutlined';
+
 // import custom components
 import Bar from "./components/Bar/Bar";
 import TestAPI from "./pages/TestAPI/TestAPI";
@@ -10,7 +13,7 @@ import Home from "./pages/home/home";
 import WeatherApp from "./pages/WeatherApp/WeatherApp";
 import Rooms from "./pages/Rooms/Rooms";
 import Footer from "./components/Footer/Footer";
-import RoomSensorsHolder from "./components/RoomSensorsHolder/RoomSensorsHolder";
+import NotFound from "./pages/NotFound/NotFound";
 
 
 //import avatars
@@ -21,6 +24,7 @@ import mohamedNour from '../src/assests/smartHomeTeam/mohamedNour.jpg';
 import eman from '../src/assests/smartHomeTeam/eman.jpeg';
 import bebars from '../src/assests/smartHomeTeam/bebars.jpg';
 import alfy from '../src/assests/smartHomeTeam/alfy.JPG';
+import salma from '../src/assests/smartHomeTeam/salma.jpg';
 import blank_avatar from '../src/assests/smartHomeTeam/blank_avatar.png';
 
 
@@ -31,6 +35,7 @@ const HomesDb = [
       {
         roomId: 1,
         roomName: 'Living Room',
+        roomIcon: <ChairOutlinedIcon fontSize="large" style={{ fill: '#0072ea' }}/>,
         sensors:
           [
             { 'sensorId': 1, 'sensorName': "Fan", 'SensorTopic': 'home/node1/D1', "sensorStatus": "ON" },
@@ -47,6 +52,7 @@ const HomesDb = [
       {
         roomId: 2,
         roomName: 'Bed Room',
+        roomIcon: <KingBedOutlinedIcon fontSize="large" style={{ fill: '#0072ea' }}/>,
         sensors:
           [
             { 'sensorId': 1, 'sensorName': "Fan", 'SensorTopic': 'home/node2/D1', "sensorStatus": "OFF" },
@@ -58,6 +64,7 @@ const HomesDb = [
       {
         roomId: 3,
         roomName: 'Kitchen',
+        roomIcon: <KitchenOutlinedIcon fontSize="large" style={{ fill: '#0072ea' }}/>,
         sensors:
           [
             { 'sensorId': 1, 'sensorName': "Fan", 'SensorTopic': 'home/node3/D1', "sensorStatus": "OFF" },
@@ -122,10 +129,10 @@ const smartHomeTeamData = [
   },
   {
     id: 8,
-    name: 'Salma Elnagar',
+    name: 'Salma El-Naggar',
     about: 'Software Engineer | Embedded Systems team',
-    contactInfo: '',
-    avatar: blank_avatar,
+    contactInfo: 'https://www.linkedin.com/in/salma-el-naggar',
+    avatar: salma,
   },
   {
     id: 9,
