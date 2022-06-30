@@ -1,4 +1,5 @@
 import { Box, Container, Typography } from "@mui/material"
+// import custom components
 import CardSensorHolder from "../CardSensorHolder/CardSensorHolder"
 
 const RoomSensorsHolder = ({ RoomName, Sensors }) => {

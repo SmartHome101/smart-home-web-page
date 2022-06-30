@@ -1,7 +1,6 @@
 import { Box, Container, Typography } from "@mui/material";
 //import custom components
 import CardRoomHolder from "../../components/CardRoomHolder/CardRoomHolder";
-import RoomSensorsHolder from '../../components/RoomSensorsHolder/RoomSensorsHolder'
 
 const Rooms = ({ HomesDb }) => {
     return (
@@ -37,8 +36,6 @@ const Rooms = ({ HomesDb }) => {
                     </div>
                 ))}
             </Box>
-            {/* <RoomSensorsHolder RoomName={"Living Room"} Sensors={livingRoom_Sensors} />
-                <RoomSensorsHolder RoomName={"Bed Room"} Sensors={BedRoom_Sensors} /> */}
         </Container>
     )
 }

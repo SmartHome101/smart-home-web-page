@@ -154,7 +154,6 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/rooms" element={<Rooms HomesDb={HomesDb} />} />
-        <Route path="/rooms/livingroom" element={<RoomSensorsHolder />} />
         <Route path="/weather-app" element={<WeatherApp />} />
         <Route path="/test-api" element={<TestAPI />} />
         <Route path="/about" element={<About smartHomeTeamData={smartHomeTeamData} />} />
