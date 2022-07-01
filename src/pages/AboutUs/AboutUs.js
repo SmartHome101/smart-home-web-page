@@ -17,7 +17,7 @@ const AboutUs = ({ techHomeTeamData }) => {
                 m: { xs: 4, lg: '45px 220px 70px 140px' },
             }}>
                 <Box sx={{ display: 'flex', flexDirection: 'column', mb: { xs: 4 }, ml: { xs: 0, lg: 5 }, textAlign: { xs: 'center', sm: 'left    ' } }}>
-                    <Typography variant="h4" sx={{ fontWeight: 'bold', mb: 4 }}>Make your home smart</Typography>
+                    <Typography variant="h4" sx={{ fontWeight: 'bold', mb: 4 }}>Make your home smart in a quick way.</Typography>
                     <Typography variant='body2' sx={{ mb: 4, maxWidth: '600px' }}>
                         The internet of things, cloud computing and rule-based occasion handling,
                         are the building pieces of our proposed progressed smart home integrated compound.
