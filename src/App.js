@@ -29,6 +29,8 @@ import blank_avatar from "../src/assests/techHomeTeam/blank_avatar.png";
 //Test Compnents
 import Header2 from "./components/Header2";
 import Landing from "./components/Landing";
+import { ThemeProvider } from "@mui/material";
+import { theme } from "./components/Theme";
 
 const HomesDb = [
   {
@@ -256,8 +258,10 @@ const App = () => {
         <Route path="/not-found" element={<NotFound />} />
       </Routes>
       <Footer /> */}
-      <Header2 />
-      <Landing />
+      <ThemeProvider theme={theme}>
+        <Header2 />
+        <Landing />
+      </ThemeProvider>
     </Fragment>
   );
 };

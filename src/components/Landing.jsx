@@ -1,4 +1,4 @@
-import { Container, Box, Typography, Link } from "@mui/material";
+import { Container, Box, Typography } from "@mui/material";
 import background from "../assests/background.png";
 const Landing = () => {
   return (
@@ -14,9 +14,10 @@ const Landing = () => {
         alignItems: "center",
       }}
     >
-      <Container sx={{ color: "#71bdf9", fontWeight: "900", mt: "60px" }}>
-        <Box sx={{ display: "flex", gap: "51px" }}>
+      <Container sx={{ fontWeight: "900", mt: "60px" }}>
+        <Box sx={{ display: "flex", gap: "28px", letterSpacing: "5px" }}>
           <Typography
+            color="primary"
             sx={{
               fontSize: "40px",
             }}
@@ -24,6 +25,7 @@ const Landing = () => {
             Make
           </Typography>
           <Typography
+            color="primary"
             sx={{
               fontSize: "40px",
             }}
@@ -31,6 +33,7 @@ const Landing = () => {
             Your
           </Typography>
           <Typography
+            color="primary"
             sx={{
               fontSize: "40px",
             }}
@@ -39,10 +42,12 @@ const Landing = () => {
           </Typography>
         </Box>
         <Typography
+          color="primary"
           sx={{
             fontSize: "80px",
             textTransform: "uppercase",
             letterSpacing: "30px",
+            fontWeight: "bold",
           }}
         >
           Smart

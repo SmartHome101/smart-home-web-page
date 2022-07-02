@@ -26,13 +26,18 @@ const Header2 = () => {
               display: "flex",
               marginLeft: "60px",
               gap: "40px",
-              color: "#6EBFFF",
               padding: "50px 0px",
             }}
           >
-            <Typography>Products</Typography>
-            <Typography>Servies</Typography>
-            <Typography>Aboust Us</Typography>
+            <Typography color="primary" variant="h5">
+              Products
+            </Typography>
+            <Typography color="primary" variant="h5">
+              Servies
+            </Typography>
+            <Typography color="primary" variant="h5">
+              About Us
+            </Typography>
           </Box>
         </Box>
         <Link
@@ -43,6 +48,8 @@ const Header2 = () => {
             border: "1px solid #246aff",
             borderRadius: "5px",
             padding: "10px 20px",
+            transition: "all 0.3s ease",
+            fontSize: "20px",
             "&:hover": {
               backgroundColor: "#246aff",
             },
