@@ -101,7 +101,7 @@ const PostStatus = ({ Topics, getStyles }) => {
                 <Typography
                     sx={{ fontSize: "14px", padding: "0 2px", mt: "2px" }}
                 >
-                    choose a topic from list below.
+                    Please, choose the topic name carefully.
                 </Typography>
             </Box>
             <FormControl sx={{ m: 1, minWidth: 120 }}>
@@ -110,7 +110,6 @@ const PostStatus = ({ Topics, getStyles }) => {
                     label="Topic Name"
                     value={topicName}
                     onChange={handleChange}
-                    helperText="Please, choose the topic name carefully"
                 />
                 {/* <InputLabel>Topic Name</InputLabel>
                 <Select

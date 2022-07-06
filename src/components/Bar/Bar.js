@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Fragment } from "react"
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -65,7 +66,9 @@ const Bar = () => {
     };
 
     return (
-        <AppBar position="static" sx={{ backgroundColor: '#2062C8' }}>
+        <Fragment>
+        <AppBar position="fixed" sx={{backgroundColor: '#2062C8'}}>
+        <Toolbar>
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
                     <HomeIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
@@ -152,7 +155,11 @@ const Bar = () => {
                     </Box>
                 </Toolbar>
             </Container>
+        </Toolbar>
         </AppBar>
+        <Toolbar/>
+        </Fragment>
+        
     );
 };
 export default Bar;

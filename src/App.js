@@ -24,6 +24,7 @@ import eman from "../src/assests/techHomeTeam/eman.jpeg";
 import bebars from "../src/assests/techHomeTeam/bebars.jpg";
 import alfy from "../src/assests/techHomeTeam/alfy.JPG";
 import salma from "../src/assests/techHomeTeam/salma.jpg";
+import Roqia from "../src/assests/techHomeTeam/Roqia.jpeg"
 import blank_avatar from "../src/assests/techHomeTeam/blank_avatar.png";
 
 //Test Compnents
@@ -197,7 +198,7 @@ const techHomeTeamData = [
     name: "Roqaya Abdullah",
     about: "Software Engineer | Embedded Systems team",
     contactInfo: "https://www.linkedin.com/in/roqaya-abdallah-21a3461b6",
-    avatar: blank_avatar,
+    avatar: Roqia,
   },
   {
     id: 5,
@@ -247,7 +248,7 @@ const App = () => {
   return (
     <Fragment>
       <CssBaseline />
-      {/* <Bar />
+      <Bar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/rooms" element={<Rooms HomesDb={HomesDb} />} />
@@ -257,11 +258,11 @@ const App = () => {
         <Route path="*" element={<Navigate to="/not-found" />} />
         <Route path="/not-found" element={<NotFound />} />
       </Routes>
-      <Footer /> */}
-      <ThemeProvider theme={theme}>
+      <Footer />
+      {/* <ThemeProvider theme={theme}>
         <Header2 />
         <Landing />
-      </ThemeProvider>
+      </ThemeProvider> */}
     </Fragment>
   );
 };
