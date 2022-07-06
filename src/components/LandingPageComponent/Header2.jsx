@@ -1,5 +1,7 @@
 import { Container, Box, Typography, Link } from "@mui/material";
-import logo from "../assests/logo.png";
+import logo from "../../assests/logo.png";
+
+
 const Header2 = () => {
   return (
     <Container
@@ -33,7 +35,7 @@ const Header2 = () => {
               Products
             </Typography>
             <Typography color="primary" variant="h5">
-              Servies
+              Services
             </Typography>
             <Typography color="primary" variant="h5">
               About Us

@@ -24,14 +24,11 @@ import eman from "../src/assests/techHomeTeam/eman.jpeg";
 import bebars from "../src/assests/techHomeTeam/bebars.jpg";
 import alfy from "../src/assests/techHomeTeam/alfy.JPG";
 import salma from "../src/assests/techHomeTeam/salma.jpg";
-import Roqia from "../src/assests/techHomeTeam/Roqia.jpeg"
+import Roqia from "../src/assests/techHomeTeam/Roqia.jpeg";
 import blank_avatar from "../src/assests/techHomeTeam/blank_avatar.png";
 
 //Test Compnents
-import Header2 from "./components/Header2";
-import Landing from "./components/Landing";
-import { ThemeProvider } from "@mui/material";
-import { theme } from "./components/Theme";
+import LandingPage from "./pages/LandingPage/LandingPage";
 
 const HomesDb = [
   {
@@ -251,6 +248,7 @@ const App = () => {
       <Bar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/landing-page" element={<LandingPage />} />
         <Route path="/rooms" element={<Rooms HomesDb={HomesDb} />} />
         <Route path="/weather-app" element={<WeatherApp />} />
         <Route path="/test-api" element={<TestAPI />} />
@@ -259,10 +257,6 @@ const App = () => {
         <Route path="/not-found" element={<NotFound />} />
       </Routes>
       <Footer />
-      {/* <ThemeProvider theme={theme}>
-        <Header2 />
-        <Landing />
-      </ThemeProvider> */}
     </Fragment>
   );
 };

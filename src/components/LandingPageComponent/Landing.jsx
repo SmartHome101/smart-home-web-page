@@ -1,5 +1,6 @@
 import { Container, Box, Typography } from "@mui/material";
-import background from "../assests/background.png";
+import background from "../../assests/background.png";
+
 const Landing = () => {
   return (
     <Container
