@@ -4,12 +4,13 @@ import { Box, Typography } from '@mui/material';
 //import custom components
 import AboutUsContent from "../../components/AboutUsContent/AboutUsContent";
 import Member from '../../components/Member/Member'
+import ContactUs from "../../components/ContactUs/ContactUs";
 
 
 const AboutUs = ({ techHomeTeamData }) => {
     return (
         <Fragment>
-        <AboutUsContent/>
+            <AboutUsContent />
             <Box>
                 <Typography variant='h4'
                     sx={{
@@ -19,7 +20,7 @@ const AboutUs = ({ techHomeTeamData }) => {
                         textAlign: { xs: 'center', md: 'left' }
                     }}>Meet the team</Typography>
                 <Box
-                    sx={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-evenly', mb: 7, mt: 2 }}>
+                    sx={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-evenly', mb: 3, mt: 2 }}>
                     {techHomeTeamData.map((teamMember) => (
                         <Member
                             key={teamMember.id}
@@ -30,6 +31,7 @@ const AboutUs = ({ techHomeTeamData }) => {
                     ))}
                 </Box>
             </Box>
+            <ContactUs/>
         </Fragment>
     )
 }
