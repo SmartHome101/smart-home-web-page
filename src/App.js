@@ -214,7 +214,7 @@ const techHomeTeamData = [
   {
     id: 7,
     name: "Mahmoud Bebars",
-    about: "Software Engineer | AI Enthusiast\n Machine Learning team",
+    about: "Software Engineer | Machine Learning team",
     contactInfo: "https://www.linkedin.com/in/mahmoud-abdullah-723606204/",
     avatar: bebars,
   },

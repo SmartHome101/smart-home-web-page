@@ -5,6 +5,7 @@ import { Box, Typography } from '@mui/material';
 import AboutUsContent from "../../components/AboutUsContent/AboutUsContent";
 import Member from '../../components/Member/Member'
 import ContactUs from "../../components/ContactUs/ContactUs";
+import Services from "../../components/Services/Services";
 
 
 const AboutUs = ({ techHomeTeamData }) => {
@@ -31,6 +32,7 @@ const AboutUs = ({ techHomeTeamData }) => {
                     ))}
                 </Box>
             </Box>
+            <Services/>
             <ContactUs/>
         </Fragment>
     )
