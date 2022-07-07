@@ -1,6 +1,8 @@
 import { Fragment } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 import CssBaseline from "@mui/material/CssBaseline";
+
+//import icons for Rooms page
 import ChairOutlinedIcon from "@mui/icons-material/ChairOutlined";
 import KingBedOutlinedIcon from "@mui/icons-material/KingBedOutlined";
 import KitchenOutlinedIcon from "@mui/icons-material/KitchenOutlined";
@@ -15,7 +17,7 @@ import Rooms from "./pages/Rooms/Rooms";
 import Footer from "./components/Footer/Footer";
 import NotFound from "./pages/NotFound/NotFound";
 
-//import avatars
+//import avatars of TecHome Team
 import ramadan from "../src/assests/techHomeTeam/mahmoudRamadan.jpg";
 import nabil from "../src/assests/techHomeTeam/mohamedNabil.jpg";
 import sabek from "../src/assests/techHomeTeam/mohamedSabek.jpg";
@@ -26,6 +28,14 @@ import alfy from "../src/assests/techHomeTeam/alfy.JPG";
 import salma from "../src/assests/techHomeTeam/salma.jpg";
 import Roqia from "../src/assests/techHomeTeam/Roqia.jpeg";
 import blank_avatar from "../src/assests/techHomeTeam/blank_avatar.png";
+
+// import icons to our services
+import mobileDevelopment from './assests/servicesImages/app-development.png'
+import webDevelopment from './assests/servicesImages/web-development.png'
+import iotSolutions from './assests/servicesImages/technology.png'
+import facialRecognition from './assests/servicesImages/facial-recognition.png'
+import nlp from './assests/servicesImages/natural-language-processing.png'
+import ml from './assests/servicesImages/machine-learning.png'
 
 //Test Compnents
 import LandingPage from "./pages/LandingPage/LandingPage";
@@ -241,6 +251,52 @@ const techHomeTeamData = [
   },
 ];
 
+
+const ServicesData =
+{
+    title: 'Our Services',
+    subtitle: 'TecHome is a leading IoT, ML, mobile app and Web development company with extensive experience of working with Android, iOS, Web, Graphics design, NFC, RFID and Bluetooth (Classic or BLE) based applications that communicate over hardware devices. Our approach is to satisfy our clients. As an innovative and smarter technology partner, We build IoT solutions for your business needs which will keep you ahead in this digital age.',
+    service: [
+        {
+            id: 1,
+            name: 'Mobile Development',
+            details: 'We provide an innovative, cost efficient and reliable Mobile and Tablet apps development services for Android and Android Tablets.',
+            image: mobileDevelopment,
+        },
+        {
+            id: 2,
+            name: 'Web Development',
+            details: 'We provide an innovative, cost efficient and reliable Mobile and Tablet apps development services for Android and Android Tablets.',
+            image: webDevelopment,
+        },
+        {
+            id: 3,
+            name: 'IoT solutions',
+            details: 'We provide an innovative, cost efficient and reliable Mobile and Tablet apps development services for Android and Android Tablets.',
+            image: iotSolutions,
+        },
+        {
+            id: 4,
+            name: 'NLP',
+            details: 'We provide an innovative, cost efficient and reliable Mobile and Tablet apps development services for Android and Android Tablets.',
+            image: nlp,
+        },
+        {
+            id: 5,
+            name: 'Face Recognition',
+            details: 'We provide an innovative, cost efficient and reliable Mobile and Tablet apps development services for Android and Android Tablets.',
+            image: facialRecognition,
+        },
+        {
+            id: 6,
+            name: 'Machine Learning',
+            details: 'We provide an innovative, cost efficient and reliable Mobile and Tablet apps development services for Android and Android Tablets.',
+            image: ml,
+        },
+    ]
+}
+
+
 const App = () => {
   return (
     <Fragment>
@@ -252,7 +308,7 @@ const App = () => {
         <Route path="/rooms" element={<Rooms HomesDb={HomesDb} />} />
         <Route path="/weather-app" element={<WeatherApp />} />
         <Route path="/test-api" element={<TestAPI />} />
-        <Route path="/about" element={<AboutUs techHomeTeamData={techHomeTeamData} />} />
+        <Route path="/about" element={<AboutUs techHomeTeamData={techHomeTeamData} ServicesData={ServicesData}/>} />
         <Route path="*" element={<Navigate to="/not-found" />} />
         <Route path="/not-found" element={<NotFound />} />
       </Routes>

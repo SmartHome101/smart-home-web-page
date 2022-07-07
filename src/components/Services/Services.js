@@ -1,53 +1,7 @@
 import { Fragment } from "react"
 import { Box, Container, Typography } from "@mui/material"
-import mobileDevelopment from '../../assests/app-development.png'
 
-const ServicesData =
-{
-    title: 'Our Services',
-    subtitle: 'TecHome is a leading IoT, ML, mobile app and Web development company with extensive experience of working with Android, iOS, Web, Graphics design, NFC, RFID and Bluetooth (Classic or BLE) based applications that communicate over hardware devices. Our approach is to satisfy our clients. As an innovative and smarter technology partner, We build IoT solutions for your business needs which will keep you ahead in this digital age.',
-    service: [
-        {
-            id: 1,
-            name: 'Mobile Development',
-            details: 'We provide an innovative, cost efficient and reliable Mobile and Tablet apps development services for Android and Android Tablets.',
-            image: mobileDevelopment,
-        },
-        {
-            id: 2,
-            name: 'Mobile Development',
-            details: 'We provide an innovative, cost efficient and reliable Mobile and Tablet apps development services for Android and Android Tablets.',
-            image: mobileDevelopment,
-        },
-        {
-            id: 3,
-            name: 'Mobile Development',
-            details: 'We provide an innovative, cost efficient and reliable Mobile and Tablet apps development services for Android and Android Tablets.',
-            image: mobileDevelopment,
-        },
-        {
-            id: 4,
-            name: 'Mobile Development',
-            details: 'We provide an innovative, cost efficient and reliable Mobile and Tablet apps development services for Android and Android Tablets.',
-            image: mobileDevelopment,
-        },
-        {
-            id: 5,
-            name: 'Mobile Development',
-            details: 'We provide an innovative, cost efficient and reliable Mobile and Tablet apps development services for Android and Android Tablets.',
-            image: mobileDevelopment,
-        },
-        {
-            id: 6,
-            name: 'Mobile Development',
-            details: 'We provide an innovative, cost efficient and reliable Mobile and Tablet apps development services for Android and Android Tablets.',
-            image: mobileDevelopment,
-        },
-    ]
-}
-
-
-const Services = () => {
+const Services = ({ServicesData}) => {
     return (
         <Fragment>
             <Box sx={{ backgroundColor: '#f9f9f9' }}>

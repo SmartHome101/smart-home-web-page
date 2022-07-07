@@ -8,7 +8,7 @@ import ContactUs from "../../components/ContactUs/ContactUs";
 import Services from "../../components/Services/Services";
 
 
-const AboutUs = ({ techHomeTeamData }) => {
+const AboutUs = ({ techHomeTeamData, ServicesData }) => {
     return (
         <Fragment>
             <AboutUsContent />
@@ -32,7 +32,7 @@ const AboutUs = ({ techHomeTeamData }) => {
                     ))}
                 </Box>
             </Box>
-            <Services/>
+            <Services ServicesData={ServicesData}/>
             <ContactUs/>
         </Fragment>
     )
