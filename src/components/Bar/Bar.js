@@ -91,7 +91,7 @@ const Bar = () => {
                             cursor: 'pointer'
                         }}
                     >
-                        Techome
+                        TecHome
                     </Typography>
                     <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
                         <IconButton
@@ -146,7 +146,7 @@ const Bar = () => {
                             cursor: 'pointer'
                         }}
                     >
-                        Techome
+                        TecHome
                     </Typography>
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                         {pages.map((page) => (
