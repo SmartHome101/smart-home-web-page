@@ -1,10 +1,11 @@
 
 .container {
-  background-image: url('../../assests/cover2.png');
+  background-image: url('../../assests/background.png');
   background-repeat: no-repeat;
   background-size: cover;
+  height: 88vh;
   border-radius: 20px;
-  box-shadow:15px 15px #45589e;
+  box-shadow:8px 8px #1a53a1;
   font-size: 100%;
   padding-bottom: 80px;
   margin: 30px;
@@ -16,7 +17,7 @@
 }
 
 .card {
-  background: #262626d0;
+  background: #174a7d72;
   color: white;
   padding: 2em;
   align-items: center;
@@ -24,7 +25,7 @@
   width: 100%;
   max-width: 420px;
   margin: auto;
-  margin-top: 35px;
+  margin-top: 100px;
 }
 
 .search {
@@ -50,7 +51,7 @@
   outline: none;
   padding: 0.4em 1em;
   border-radius: 24px;
-  background: #7c7c7c2b;
+  background: #1e6db22b;
   color: white;
   font-family: inherit;
   font-size: 105%;
@@ -58,12 +59,16 @@
 }
 
 .search button:hover {
-  background: #45589e;
+  background: #134488;
 }
 .temp {
   margin: 0;
   color: #fff;
   margin-bottom: 0.4em;
+}
+.city{
+  margin-top: 12px;
+  text-align: center;
 }
 
 .flex {

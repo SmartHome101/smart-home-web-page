@@ -1,6 +1,8 @@
 import { Fragment } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 import CssBaseline from "@mui/material/CssBaseline";
+import { createTheme } from "@mui/material";
+import { ThemeProvider } from "@mui/material";
 
 //import icons for Rooms page
 import ChairOutlinedIcon from "@mui/icons-material/ChairOutlined";
@@ -15,6 +17,7 @@ import Home from "./pages/home/home";
 import WeatherApp from "./pages/WeatherApp/WeatherApp";
 import Rooms from "./pages/Rooms/Rooms";
 import Footer from "./components/Footer/Footer";
+import LandingPage from "./pages/LandingPage/LandingPage";
 import NotFound from "./pages/NotFound/NotFound";
 
 //import avatars of TecHome Team
@@ -37,8 +40,7 @@ import facialRecognition from './assests/servicesImages/facial-recognition.png'
 import nlp from './assests/servicesImages/natural-language-processing.png'
 import ml from './assests/servicesImages/machine-learning.png'
 
-//Test Compnents
-import LandingPage from "./pages/LandingPage/LandingPage";
+
 
 const HomesDb = [
   {
@@ -254,66 +256,81 @@ const techHomeTeamData = [
 
 const ServicesData =
 {
-    title: 'Our Services',
-    subtitle: 'TecHome is a leading IoT, ML, mobile app and Web development company with extensive experience of working with Android, iOS, Web, Graphics design, NFC, RFID and Bluetooth (Classic or BLE) based applications that communicate over hardware devices. Our approach is to satisfy our clients. As an innovative and smarter technology partner, We build IoT solutions for your business needs which will keep you ahead in this digital age.',
-    service: [
-        {
-            id: 1,
-            name: 'Mobile Development',
-            details: 'We provide an innovative, cost efficient and reliable Mobile and Tablet apps development services for Android and Android Tablets.',
-            image: mobileDevelopment,
-        },
-        {
-            id: 2,
-            name: 'Web Development',
-            details: 'We provide an innovative, cost efficient and reliable Mobile and Tablet apps development services for Android and Android Tablets.',
-            image: webDevelopment,
-        },
-        {
-            id: 3,
-            name: 'IoT solutions',
-            details: 'We provide an innovative, cost efficient and reliable Mobile and Tablet apps development services for Android and Android Tablets.',
-            image: iotSolutions,
-        },
-        {
-            id: 4,
-            name: 'NLP',
-            details: 'We provide an innovative, cost efficient and reliable Mobile and Tablet apps development services for Android and Android Tablets.',
-            image: nlp,
-        },
-        {
-            id: 5,
-            name: 'Face Recognition',
-            details: 'We provide an innovative, cost efficient and reliable Mobile and Tablet apps development services for Android and Android Tablets.',
-            image: facialRecognition,
-        },
-        {
-            id: 6,
-            name: 'Machine Learning',
-            details: 'We provide an innovative, cost efficient and reliable Mobile and Tablet apps development services for Android and Android Tablets.',
-            image: ml,
-        },
-    ]
+  title: 'Our Services',
+  subtitle: 'TecHome is a leading IoT, ML, mobile app and Web development company with extensive experience of working with Android, iOS, Web, Graphics design, NFC, RFID and Bluetooth (Classic or BLE) based applications that communicate over hardware devices. Our approach is to satisfy our clients. As an innovative and smarter technology partner, We build IoT solutions for your business needs which will keep you ahead in this digital age.',
+  service: [
+    {
+      id: 1,
+      name: 'Mobile Development',
+      details: 'We provide an innovative, cost efficient and reliable Mobile and Tablet apps development services for Android and Android Tablets.',
+      image: mobileDevelopment,
+    },
+    {
+      id: 2,
+      name: 'Web Development',
+      details: 'We provide an innovative, cost efficient and reliable Mobile and Tablet apps development services for Android and Android Tablets.',
+      image: webDevelopment,
+    },
+    {
+      id: 3,
+      name: 'IoT solutions',
+      details: 'We provide an innovative, cost efficient and reliable Mobile and Tablet apps development services for Android and Android Tablets.',
+      image: iotSolutions,
+    },
+    {
+      id: 4,
+      name: 'NLP',
+      details: 'We provide an innovative, cost efficient and reliable Mobile and Tablet apps development services for Android and Android Tablets.',
+      image: nlp,
+    },
+    {
+      id: 5,
+      name: 'Face Recognition',
+      details: 'We provide an innovative, cost efficient and reliable Mobile and Tablet apps development services for Android and Android Tablets.',
+      image: facialRecognition,
+    },
+    {
+      id: 6,
+      name: 'Machine Learning',
+      details: 'We provide an innovative, cost efficient and reliable Mobile and Tablet apps development services for Android and Android Tablets.',
+      image: ml,
+    },
+  ]
 }
 
+export const theme = createTheme({
+  palette: {
+      button:'#123B73',
+      title:'#71bdf9',
+  },
+  typography: {
+    fontFamily: "Cairo",
+    fontWeightLight: 400,
+    fontWeightRegular: 500,
+    fontWeightMedium: 600,
+    fontWeightBold: 700,
+  },
+});
 
 const App = () => {
   return (
-    <Fragment>
-      <CssBaseline />
-      <Bar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/landing-page" element={<LandingPage />} />
-        <Route path="/rooms" element={<Rooms HomesDb={HomesDb} />} />
-        <Route path="/weather-app" element={<WeatherApp />} />
-        <Route path="/test-api" element={<TestAPI />} />
-        <Route path="/about" element={<AboutUs techHomeTeamData={techHomeTeamData} ServicesData={ServicesData}/>} />
-        <Route path="*" element={<Navigate to="/not-found" />} />
-        <Route path="/not-found" element={<NotFound />} />
-      </Routes>
-      <Footer />
-    </Fragment>
+    <ThemeProvider theme={theme}>
+      <Fragment>
+        <CssBaseline />
+        <Bar />
+        <Routes>
+          <Route path="/" element={<LandingPage ServicesData={ServicesData} />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/rooms" element={<Rooms HomesDb={HomesDb} />} />
+          <Route path="/weather-app" element={<WeatherApp />} />
+          <Route path="/test-api" element={<TestAPI />} />
+          <Route path="/about" element={<AboutUs techHomeTeamData={techHomeTeamData} ServicesData={ServicesData} />} />
+          <Route path="*" element={<Navigate to="/not-found" />} />
+          <Route path="/not-found" element={<NotFound />} />
+        </Routes>
+        <Footer />
+      </Fragment>
+    </ThemeProvider>
   );
 };
 

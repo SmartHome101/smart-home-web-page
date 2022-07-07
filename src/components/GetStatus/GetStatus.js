@@ -46,7 +46,7 @@ const GetStatus = ({ Topics, getStyles }) => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        
+
         if (topicName.length !== 0) {
             try {
                 const { data } = await GetData()
@@ -77,11 +77,14 @@ const GetStatus = ({ Topics, getStyles }) => {
             >
                 <Box sx={{ width: "100%", mb: "2px" }}>
                     <Typography
-                        sx={{ fontSize: "18px", fontWeight: "600", padding: "0 2px" }}
+                        variant='h5'
+                        sx={{ fontWeight: 600, padding: "0 2px" }}
                     >
                         Get information about a specific topic
                     </Typography>
                     <Typography
+                        variant="body2"
+                        color='text.secondary'
                         sx={{ fontSize: "14px", padding: "0 2px", mt: "2px" }}
                     >
                         Please, choose the topic name carefully.
@@ -122,6 +125,8 @@ const GetStatus = ({ Topics, getStyles }) => {
                             maxHeight: 45,
                             alignSelf: "flex-start",
                             fontSize: "14px",
+                            backgroundColor: '#123B73',
+                            color: 'white'
                         }}
                     >
                         get Status

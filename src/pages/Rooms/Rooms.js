@@ -15,7 +15,7 @@ const Rooms = ({ HomesDb }) => {
                 }}
             >
                 <Box sx={{
-                    bgcolor: 'primary.main',
+                    bgcolor: '#1a53a1',
                     mb: 2,
                     p: "16px",
                     boxShadow: 3,

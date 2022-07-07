@@ -16,7 +16,8 @@ const TopicStatus = ({ Data }) => {
             }}
         >
             <Typography
-                sx={{ fontSize: "22px", fontWeight: "600", padding: "0 2px" }}
+                variant='h5'
+                sx={{ fontWeight: 600, padding: "0 2px" }}
             >Topic Status</Typography>
             <div>Topic Name: {Data.topic}</div>
             <div>Topic State: {Data.payload.message !== null && <span>{Data.payload.message}</span>}</div>

@@ -13,12 +13,12 @@ const AboutUs = ({ techHomeTeamData, ServicesData }) => {
         <Fragment>
             <AboutUsContent />
             <Box>
-                <Typography variant='h4'
+                <Typography
+                    variant='h4'
                     sx={{
                         pl: { xs: 0, md: 4 },
                         pt: 2,
-                        fontWeight: 'bold',
-                        textAlign: { xs: 'center', md: 'left' }
+                        textAlign: 'center'
                     }}>Meet the team</Typography>
                 <Box
                     sx={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-evenly', mb: 3, mt: 2 }}>
@@ -32,8 +32,8 @@ const AboutUs = ({ techHomeTeamData, ServicesData }) => {
                     ))}
                 </Box>
             </Box>
-            <Services ServicesData={ServicesData}/>
-            <ContactUs/>
+            <Services ServicesData={ServicesData} />
+            <ContactUs />
         </Fragment>
     )
 }

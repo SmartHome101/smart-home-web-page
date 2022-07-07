@@ -25,7 +25,7 @@ const Bar = () => {
             name: "Home",
             handleOnClick: () => {
                 setAnchorElNav(null);
-                navigate("/");
+                navigate("/home");
             },
         },
         {
@@ -65,25 +65,30 @@ const Bar = () => {
         setAnchorElNav(null);
     };
 
+    const handleOnClickTitle =()=>{
+        navigate("/");
+    }
+
     return (
         <Fragment>
-        <AppBar position="fixed" sx={{backgroundColor: '#2062C8'}}>
+        <AppBar position="fixed" sx={{backgroundColor: '#123B73', boxShadow: 'none'}}>
         <Toolbar>
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
-                    <HomeIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+                    <HomeIcon sx={{ display: { xs: 'none', md: 'flex' }, color:'white', mr: 1 }} />
                     <Typography
                         variant="h6"
                         noWrap
                         component="a"
-                        href="/"
+                        onClick={handleOnClickTitle}
                         sx={{
                             mr: 2,
                             display: { xs: 'none', md: 'flex' },
                             fontWeight: 700,
                             letterSpacing: '.1rem',
-                            color: 'inherit',
+                            color: 'white',
                             textDecoration: 'none',
+                            cursor: 'pointer'
                         }}
                     >
                         Techome
@@ -95,7 +100,7 @@ const Bar = () => {
                             aria-controls="menu-appbar"
                             aria-haspopup="true"
                             onClick={handleOpenNavMenu}
-                            color="inherit"
+                            sx={{color: '#fff'}}
                         >
                             <MenuIcon />
                         </IconButton>
@@ -124,20 +129,21 @@ const Bar = () => {
                             ))}
                         </Menu>
                     </Box>
-                    <HomeIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
+                    <HomeIcon sx={{ display: { xs: 'flex', md: 'none' }, color: 'white', mr: 1 }} />
                     <Typography
                         variant="h5"
                         noWrap
                         component="a"
-                        href=""
+                        onClick={handleOnClickTitle}
                         sx={{
                             mr: 2,
                             display: { xs: 'flex', md: 'none' },
                             flexGrow: 1,
                             fontWeight: 700,
                             letterSpacing: '.1rem',
-                            color: 'inherit',
+                            color: 'white',
                             textDecoration: 'none',
+                            cursor: 'pointer'
                         }}
                     >
                         Techome

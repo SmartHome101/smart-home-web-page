@@ -8,44 +8,46 @@ const Landing = () => {
       maxWidth="false"
       sx={{
         height: "100vh",
+        minWidth: '300px',
         backgroundImage: `url(${background})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         display: "flex",
         alignItems: "center",
+        objectFit: 'center'
       }}
     >
       <Container sx={{ fontWeight: "900", mt: "60px" }}>
         <Box sx={{ display: "flex", gap: "28px", letterSpacing: "5px" }}>
           <Typography
-            color="primary"
+            color="title"
             sx={{
-              fontSize: "40px",
+              fontSize: {xs: '20px', sm: '40px'},
             }}
           >
             Make
           </Typography>
           <Typography
-            color="primary"
+            color="title"
             sx={{
-              fontSize: "40px",
+              fontSize: {xs: '20px', sm: '40px'},
             }}
           >
             Your
           </Typography>
           <Typography
-            color="primary"
+            color="title"
             sx={{
-              fontSize: "40px",
+              fontSize: {xs: '20px', sm: '40px'},
             }}
           >
             Home
           </Typography>
         </Box>
         <Typography
-          color="primary"
+          color="title"
           sx={{
-            fontSize: "80px",
+            fontSize: {xs: '40px', sm: '80px'},
             textTransform: "uppercase",
             letterSpacing: "30px",
             fontWeight: "bold",
