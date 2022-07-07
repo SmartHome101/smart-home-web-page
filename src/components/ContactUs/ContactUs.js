@@ -11,21 +11,20 @@ const ContactUs = () => {
     const [subject, setSubject] = useState('')
     const [message, setMessage] = useState('')
 
+
     const handleOnSubmit = (e) => {
         e.preventDefault();
         emailjs.sendForm('service_lfvvqti', 'template_imt47gm', form.current, 'user_LolrCiBKtQin705vxo8S6')
-            .then(() => {
-                emailjs.sendForm('service_lfvvqti', 'template_l8ej52n', form.current, 'user_LolrCiBKtQin705vxo8S6')
+            .then(async () => {
+                await emailjs.sendForm('service_lfvvqti', 'template_l8ej52n', form.current, 'user_LolrCiBKtQin705vxo8S6')
+                //clear form after submitting
+                setName('')
+                setEmail('')
+                setSubject('')
+                setMessage('')
             }, (error) => {
                 console.log(error.text);
             });
-
-            //clear form after submitting
-            setName('')
-            setEmail('')
-            setSubject('')
-            setMessage('')
-        
     }
 
     return (
@@ -39,16 +38,16 @@ const ContactUs = () => {
             <form ref={form} onSubmit={handleOnSubmit}>
                 <Grid container spacing={1}>
                     <Grid xs={12} item>
-                        <TextField name="user_name" value={name} placeholder="Enter first name" label="First Name" variant="outlined" fullWidth required />
+                        <TextField name="user_name" value={name} onChange={(e) => { setName(e.target.value) }} placeholder="Enter first name" label="First Name" variant="outlined" fullWidth required />
                     </Grid>
                     <Grid item xs={12}>
-                        <TextField name="user_email" value={email} type="email" placeholder="Enter email" label="Email" variant="outlined" fullWidth required />
+                        <TextField name="user_email" value={email} onChange={(e) => { setEmail(e.target.value) }} type="email" placeholder="Enter email" label="Email" variant="outlined" fullWidth required />
                     </Grid>
                     <Grid item xs={12}>
-                        <TextField name="subject" value={subject}placeholder="Enter email subject" label="Subject" variant="outlined" fullWidth required />
+                        <TextField name="subject" value={subject} onChange={(e) => { setSubject(e.target.value) }} placeholder="Enter email subject" label="Subject" variant="outlined" fullWidth required />
                     </Grid>
                     <Grid item xs={12}>
-                        <TextField name="message" value={message} label="Message" multiline rows={4} placeholder="Type your message here" variant="outlined" fullWidth required />
+                        <TextField name="message" value={message} onChange={(e) => { setMessage(e.target.value) }} label="Message" multiline rows={4} placeholder="Type your message here" variant="outlined" fullWidth required />
                     </Grid>
                     <Grid item xs={12}>
                         <Button type="submit" variant="contained" color="primary" fullWidth>Submit</Button>
