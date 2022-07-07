@@ -94,3 +94,10 @@
   margin: 16px 0;
   transition: color 0.5s;
 }
+
+@media (max-width: 960px) {
+  .boxContainer{
+    height: auto;
+  }
+  
+}

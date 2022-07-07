@@ -38,7 +38,7 @@ const ContactUs = () => {
             <form ref={form} onSubmit={handleOnSubmit}>
                 <Grid container spacing={1}>
                     <Grid xs={12} item>
-                        <TextField name="user_name" value={name} onChange={(e) => { setName(e.target.value) }} placeholder="Enter first name" label="First Name" variant="outlined" fullWidth required />
+                        <TextField name="user_name" value={name} onChange={(e) => { setName(e.target.value) }} placeholder="Enter your name" label="Name" variant="outlined" fullWidth required />
                     </Grid>
                     <Grid item xs={12}>
                         <TextField name="user_email" value={email} onChange={(e) => { setEmail(e.target.value) }} type="email" placeholder="Enter email" label="Email" variant="outlined" fullWidth required />

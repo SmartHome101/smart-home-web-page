@@ -4,7 +4,6 @@ import background from "../../assests/background.png";
 const Landing = () => {
   return (
     <Container
-      disableGutters
       maxWidth="false"
       sx={{
         height: "100vh",
@@ -14,7 +13,6 @@ const Landing = () => {
         backgroundPosition: "center",
         display: "flex",
         alignItems: "center",
-        objectFit: 'center'
       }}
     >
       <Container sx={{ fontWeight: "900", mt: "60px" }}>
