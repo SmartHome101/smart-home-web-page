@@ -5,7 +5,6 @@
   background-size: cover;
   height: 88vh;
   border-radius: 20px;
-  box-shadow:8px 8px #1a53a1;
   font-size: 100%;
   padding-bottom: 80px;
   margin: 30px;
@@ -108,5 +107,13 @@
       padding: 1em;
       width: 100%;
       max-width: 300px;
+    }
+    .search{
+      justify-content: space-between;
+    }
+
+    .searchBar{
+      padding: 0.1em 1em;
+      width: calc(100% - 70px);
     }
 }

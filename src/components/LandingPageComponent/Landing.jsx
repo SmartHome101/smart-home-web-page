@@ -7,7 +7,7 @@ const Landing = () => {
       maxWidth="false"
       sx={{
         height: "100vh",
-        minWidth: '300px',
+        minWidth: '400px',
         backgroundImage: `url(${background})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
