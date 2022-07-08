@@ -212,7 +212,7 @@ const techHomeTeamData = [
   {
     id: 5,
     name: "Mohamed Nour",
-    about: "C# and Unity Game developer. | Mobile Application team",
+    about: "C# and Unity Game developer | Mobile App team",
     contactInfo: "https://www.linkedin.com/in/mohamed-nour-b44955176/",
     avatar: mohamedNour,
   },

@@ -9,26 +9,16 @@ import { Box } from '@mui/material';
 
 const Member = ({ Name, About, Avatar, ContactInfo }) => {
     return (
-        <Box>
-            <Card
-                sx={{
-                    width: {xs: '250px', lg: '300px'},
-                    minHeight: '450px',
-                    boxShadow: 4,
-                    borderRadius: '20px',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    justifyContent: 'center',
-                    mt: 4
-                }}>
+        <Box >
+            <Card className={classes.card} sx={{boxShadow: 3, borderRadius: 5}}>
                 <img alt='avatar' src={Avatar} className={classes.media}/>
                 <CardContent>
-                    <Typography gutterBottom variant="h5" component="div">
+                    <h5 gutterBottom className={classes.name}>
                         {Name}
-                    </Typography>
-                    <Typography variant="body2" color="text.secondary">
+                    </h5>
+                    <p color="text.secondary" className={classes.about}>
                         {About}
-                    </Typography>
+                    </p>
                 </CardContent>
                 <CardActions>
                     <Button size="small" sx={{borderRadius: '50px'}} href={ContactInfo} target="_blank">connect</Button>
