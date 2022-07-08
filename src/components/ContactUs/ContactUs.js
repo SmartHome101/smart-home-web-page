@@ -28,7 +28,7 @@ const ContactUs = () => {
     }
 
     return (
-        <Box style={{ maxWidth: 800, padding: "20px 5px", margin: "0 auto" }}>
+        <Box style={{ maxWidth: 800, padding: "20px 5px", margin: "40px auto " }} name='contactus'>
             <Typography gutterBottom variant="h4" align='center'>
                 Contact Us
             </Typography>
