@@ -97,6 +97,7 @@
 @media (max-width: 600px) {
     .container{
       margin: 30px 20px;
+      height: auto;
     }
 
     .header {

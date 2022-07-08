@@ -1,5 +1,7 @@
-import { Fragment, useState } from "react";
+import { Fragment, useState, forwardRef } from "react";
 import { Typography, Box, Button, FormControl, TextField } from "@mui/material";
+import Snackbar from "@mui/material/Snackbar";
+import MuiAlert from "@mui/material/Alert";
 import axios from "axios";
 import TopicStatus from "../TopicStatus/TopicStatus";
 
@@ -8,8 +10,17 @@ import TopicStatus from "../TopicStatus/TopicStatus";
 // import axios from '../../lib/generalAPI';
 
 
+const Alert = forwardRef(function Alert(props, ref) {
+    return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
+});
+
+
+
 const GetStatus = ({ Topics, getStyles }) => {
     const [topicName, setTopicName] = useState('');
+    const [open, setOpen] = useState(false);
+
+
     const [topicData, setTopicData] = useState({
         topic: '',
         payload: { message: null },
@@ -47,17 +58,25 @@ const GetStatus = ({ Topics, getStyles }) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        if (topicName.length !== 0) {
-            try {
-                const { data } = await GetData()
-                setTopicData(data)
-                setTopicName('')
-            }
-            catch (error) {
-                console.log(error);
-            }
+        try {
+            const { data } = await GetData()
+            setTopicData(data)
+            setOpen(true);
+            setTopicName('')
+        }
+        catch (error) {
+            console.log(error);
         }
     }
+
+    const handleClose = (event, reason) => {
+        if (reason === "clickaway") {
+            return;
+        }
+        setOpen(false);
+    };
+
+
     return (
         <Fragment>
             <Box
@@ -96,6 +115,7 @@ const GetStatus = ({ Topics, getStyles }) => {
                         label="Topic Name"
                         value={topicName}
                         onChange={handleChange}
+                        required
                     />
                     {/* <InputLabel>Topic Name</InputLabel> */}
                     {/* <Select
@@ -131,6 +151,11 @@ const GetStatus = ({ Topics, getStyles }) => {
                     >
                         get Status
                     </Button>
+                    <Snackbar open={open} autoHideDuration={3000} onClose={handleClose}>
+                        <Alert onClose={handleClose} severity="success" sx={{ width: "100%" }}>
+                            Done!
+                        </Alert>
+                    </Snackbar>
                 </Box>
             </Box>
             <TopicStatus Data={topicData} />

@@ -1,6 +1,11 @@
 import classes from './WeatherApp.module.css'
 import SearchIcon from '@mui/icons-material/Search';
-import { Box } from '@mui/material';
+import { Box, Button } from '@mui/material';
+import Dialog from '@mui/material/Dialog';
+import DialogActions from '@mui/material/DialogActions';
+import DialogContent from '@mui/material/DialogContent';
+import DialogContentText from '@mui/material/DialogContentText';
+import DialogTitle from '@mui/material/DialogTitle';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 
@@ -8,6 +13,7 @@ import { useEffect, useState } from 'react';
 const WeatherApp = () => {
     const [data, setData] = useState({});
     const [city, setCity] = useState('');
+    const [open, setOpen] = useState(false);
 
     useEffect(() => {
         async function fetchData() {
@@ -25,7 +31,7 @@ const WeatherApp = () => {
                 setData(res.data)
             }).catch((res) => {
                 if (res.status !== 200) {
-                    alert("No weather found.");
+                    setOpen(true)
                     throw new Error("No weather found.");
                 }
             })
@@ -41,6 +47,11 @@ const WeatherApp = () => {
     const handleOnClick = () => {
         GetData();
     }
+
+    const handleClose = () => {
+        setOpen(false);
+    };
+
 
     return (
         <Box className={classes.container}>
@@ -71,6 +82,25 @@ const WeatherApp = () => {
                     {data.wind ? <div className={classes.wind}>Wind speed: {data.wind.speed} km/h</div> : <div className={classes.wind}>Wind speed: 6.2 km/h</div>}
                 </div>
             </div>
+            <Dialog
+                open={open}
+                onClose={handleClose}
+                aria-labelledby="alert-dialog-title"
+                aria-describedby="alert-dialog-description"
+            >
+                <DialogTitle id="alert-dialog-title">
+                    {"Oops, Incorrect City Name!"}
+                </DialogTitle>
+                <DialogContent>
+                    <DialogContentText id="alert-dialog-description">
+                        Oops, Apparently you entered a wrong city name.
+                        Try again, Type a correct city name.
+                    </DialogContentText>
+                </DialogContent>
+                <DialogActions>
+                    <Button onClick={handleClose} autoFocus>Got it</Button>
+                </DialogActions>
+            </Dialog>
         </Box>
     )
 }

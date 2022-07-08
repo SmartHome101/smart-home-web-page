@@ -1,11 +1,18 @@
-import { useRef, useState } from 'react';
+import { useRef, useState, forwardRef } from 'react';
 import { Grid, Box, Typography, TextField, Button } from '@mui/material'
 import emailjs from '@emailjs/browser';
+import Snackbar from "@mui/material/Snackbar";
+import MuiAlert from "@mui/material/Alert";
+
+const Alert = forwardRef(function Alert(props, ref) {
+    return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
+});
+
 
 const ContactUs = () => {
 
     const form = useRef();
-
+    const [open, setOpen] = useState(false);
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [subject, setSubject] = useState('')
@@ -22,10 +29,18 @@ const ContactUs = () => {
                 setEmail('')
                 setSubject('')
                 setMessage('')
+                setOpen(true);
             }, (error) => {
                 console.log(error.text);
             });
     }
+
+    const handleClose = (event, reason) => {
+        if (reason === "clickaway") {
+            return;
+        }
+        setOpen(false);
+    };
 
     return (
         <Box style={{ maxWidth: 800, padding: "20px 5px", margin: "40px auto " }} name='contactus'>
@@ -50,10 +65,15 @@ const ContactUs = () => {
                         <TextField name="message" value={message} onChange={(e) => { setMessage(e.target.value) }} label="Message" multiline rows={4} placeholder="Type your message here" variant="outlined" fullWidth required />
                     </Grid>
                     <Grid item xs={12}>
-                        <Button type="submit" variant="contained" sx={{backgroundColor: '#123B73', color: 'white'}} fullWidth>Submit</Button>
+                        <Button type="submit" variant="contained" sx={{ backgroundColor: '#123B73', color: 'white' }} fullWidth>Submit</Button>
                     </Grid>
                 </Grid>
             </form>
+            <Snackbar open={open} autoHideDuration={3000} onClose={handleClose}>
+                <Alert onClose={handleClose} severity="success" sx={{ width: "100%" }}>
+                    Done!
+                </Alert>
+            </Snackbar>
         </Box>
     )
 }

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, forwardRef } from "react";
 import {
     Typography,
     Box,
@@ -10,15 +10,23 @@ import {
     FormLabel,
     TextField
 } from "@mui/material";
+import Snackbar from "@mui/material/Snackbar";
+import MuiAlert from "@mui/material/Alert"
 import axios from "axios";
 // import { useTheme } from '@mui/material/styles';
 // import {InputLabel, Select, MenuItem } from "@mui/material"
 // import axios from '../../lib/generalAPI';
 
 
+
+const Alert = forwardRef(function Alert(props, ref) {
+    return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
+});
+
 const PostStatus = ({ Topics, getStyles }) => {
     const [topicName, setTopicName] = useState('');
-    const [message, setMessage] = useState(null);
+    const [message, setMessage] = useState('ON');
+    const [open, setOpen] = useState(false);
     // const [status, setStatus] = useState(true);
     // const theme = useTheme();
 
@@ -64,17 +72,23 @@ const PostStatus = ({ Topics, getStyles }) => {
 
     const handleSubmit = async (e) => {
         e.preventDefault()
-        if (topicName.length !== 0) {
-            try {
-                await PostData()
-                setTopicName('')
-                setMessage(null)
-            }
-            catch (error) {
-                console.log(error);
-            }
+        try {
+            await PostData()
+            setTopicName('')
+            setOpen(true);
+            setMessage('ON')
+        }
+        catch (error) {
+            console.log(error);
         }
     }
+
+    const handleClose = (event, reason) => {
+        if (reason === "clickaway") {
+            return;
+        }
+        setOpen(false);
+    };
 
     return (
         <Box
@@ -113,6 +127,7 @@ const PostStatus = ({ Topics, getStyles }) => {
                     label="Topic Name"
                     value={topicName}
                     onChange={handleChange}
+                    required
                 />
                 {/* <InputLabel>Topic Name</InputLabel>
                 <Select
@@ -140,7 +155,7 @@ const PostStatus = ({ Topics, getStyles }) => {
                     value={message}
                     onChange={handleMessageChange}
                 >
-                    <FormControlLabel value='ON' control={<Radio />} label="ON" />
+                    <FormControlLabel value='ON' control={<Radio />} label="ON"/>
                     <FormControlLabel value='OFF' control={<Radio />} label="OFF" />
                 </RadioGroup>
             </FormControl>
@@ -158,6 +173,11 @@ const PostStatus = ({ Topics, getStyles }) => {
                 >
                     post Status
                 </Button>
+                <Snackbar open={open} autoHideDuration={3000} onClose={handleClose}>
+                    <Alert onClose={handleClose} severity="success" sx={{ width: "100%" }}>
+                        Done!
+                    </Alert>
+                </Snackbar>
             </Box>
         </Box>
     )
