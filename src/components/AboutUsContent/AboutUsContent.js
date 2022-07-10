@@ -1,5 +1,5 @@
 import { Box, Typography } from '@mui/material';
-import GP_Team from '../../assests/smartHomeArt.png';
+import GP_Team from '../../assets/smartHomeArt.png';
 import classes from './AboutUsContent.module.css';
 
 const AboutUsContent = () => {

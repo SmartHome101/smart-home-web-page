@@ -21,24 +21,24 @@ import LandingPage from "./pages/LandingPage/LandingPage";
 import NotFound from "./pages/NotFound/NotFound";
 
 //import avatars of TecHome Team
-import ramadan from "../src/assests/techHomeTeam/mahmoudRamadan.jpg";
-import nabil from "../src/assests/techHomeTeam/mohamedNabil.jpg";
-import sabek from "../src/assests/techHomeTeam/mohamedSabek.jpg";
-import mohamedNour from "../src/assests/techHomeTeam/mohamedNour.jpg";
-import eman from "../src/assests/techHomeTeam/eman.jpeg";
-import bebars from "../src/assests/techHomeTeam/bebars.jpg";
-import alfy from "../src/assests/techHomeTeam/alfy.JPG";
-import salma from "../src/assests/techHomeTeam/salma.jpg";
-import Roqia from "../src/assests/techHomeTeam/Roqia.jpeg";
-import blank_avatar from "../src/assests/techHomeTeam/blank_avatar.png";
+import ramadan from "../src/assets/techHomeTeam/mahmoudRamadan.jpg";
+import nabil from "../src/assets/techHomeTeam/mohamedNabil.jpg";
+import sabek from "../src/assets/techHomeTeam/mohamedSabek.jpg";
+import mohamedNour from "../src/assets/techHomeTeam/mohamedNour.jpg";
+import eman from "../src/assets/techHomeTeam/eman.jpeg";
+import bebars from "../src/assets/techHomeTeam/bebars.jpg";
+import alfy from "../src/assets/techHomeTeam/alfy.JPG";
+import salma from "../src/assets/techHomeTeam/salma.jpg";
+import Roqia from "../src/assets/techHomeTeam/Roqia.jpeg";
+import blank_avatar from "../src/assets/techHomeTeam/blank_avatar.png";
 
 // import icons to our services
-import mobileDevelopment from './assests/servicesImages/app-development.png'
-import webDevelopment from './assests/servicesImages/web-development.png'
-import iotSolutions from './assests/servicesImages/technology.png'
-import facialRecognition from './assests/servicesImages/facial-recognition.png'
-import nlp from './assests/servicesImages/natural-language-processing.png'
-import ml from './assests/servicesImages/machine-learning.png'
+import mobileDevelopment from './assets/servicesImages/app-development.png'
+import webDevelopment from './assets/servicesImages/web-development.png'
+import iotSolutions from './assets/servicesImages/technology.png'
+import facialRecognition from './assets/servicesImages/facial-recognition.png'
+import nlp from './assets/servicesImages/natural-language-processing.png'
+import ml from './assets/servicesImages/machine-learning.png'
 
 
 
@@ -257,7 +257,7 @@ const techHomeTeamData = [
 const ServicesData =
 {
   title: 'Our Services',
-  subtitle: 'TecHome is a leading IoT, ML, mobile app and Web development company with extensive experience of working with Android, iOS, Web, Graphics design, NFC, RFID and Bluetooth (Classic or BLE) based applications that communicate over hardware devices. Our approach is to satisfy our clients. As an innovative and smarter technology partner, We build IoT solutions for your business needs which will keep you ahead in this digital age.',
+  subtitle: 'TecHome is a leading IoT, ML, mobile app and Web development company with extensive experience of working with Android, Web, Graphics design. Our approach is to satisfy our clients. As an innovative and smarter technology partner, We build IoT solutions for your business needs which will keep you ahead in this digital age.',
   service: [
     {
       id: 1,
@@ -268,31 +268,31 @@ const ServicesData =
     {
       id: 2,
       name: 'Web Development',
-      details: 'We provide an innovative, cost efficient and reliable Mobile and Tablet apps development services for Android and Android Tablets.',
+      details: 'Providing an innovative, cost efficient and reliable Web applications development services using trending frameworks.',
       image: webDevelopment,
     },
     {
       id: 3,
       name: 'IoT solutions',
-      details: 'We provide an innovative, cost efficient and reliable Mobile and Tablet apps development services for Android and Android Tablets.',
+      details: 'We provide an innovative, cost efficient and reliable IoT solutions integrated with cloud services to make control your home in an easy way.',
       image: iotSolutions,
     },
     {
       id: 4,
       name: 'NLP',
-      details: 'We provide an innovative, cost efficient and reliable Mobile and Tablet apps development services for Android and Android Tablets.',
+      details: 'Creating an innovative and reliable NLP models using latest frameworks, libraries and technologies, integrated with mobile apps.',
       image: nlp,
     },
     {
       id: 5,
       name: 'Face Recognition',
-      details: 'We provide an innovative, cost efficient and reliable Mobile and Tablet apps development services for Android and Android Tablets.',
+      details: 'Building reliable facial recognition models to secure your home and only provide access to right people in an efficient way.',
       image: facialRecognition,
     },
     {
       id: 6,
       name: 'Machine Learning',
-      details: 'We provide an innovative, cost efficient and reliable Mobile and Tablet apps development services for Android and Android Tablets.',
+      details: 'Building reliable ML models with most demanding frameworks to easily enhance your mobile or web app experience.',
       image: ml,
     },
   ]

@@ -1,5 +1,5 @@
 import { Container, Box, Typography, Link } from "@mui/material";
-import logo from "../../assests/logo.png";
+import logo from "../../assets/logo.png";
 
 
 const Header2 = () => {
